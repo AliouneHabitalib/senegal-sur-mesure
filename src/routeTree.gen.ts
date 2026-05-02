@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VoyageSurMesureRouteImport } from './routes/voyage-sur-mesure'
+import { Route as ExperiencesRouteImport } from './routes/experiences'
+import { Route as EntreprisesRouteImport } from './routes/entreprises'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VoyageSurMesureRoute = VoyageSurMesureRouteImport.update({
+  id: '/voyage-sur-mesure',
+  path: '/voyage-sur-mesure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperiencesRoute = ExperiencesRouteImport.update({
+  id: '/experiences',
+  path: '/experiences',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntreprisesRoute = EntreprisesRouteImport.update({
+  id: '/entreprises',
+  path: '/entreprises',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,83 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/entreprises': typeof EntreprisesRoute
+  '/experiences': typeof ExperiencesRoute
+  '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/entreprises': typeof EntreprisesRoute
+  '/experiences': typeof ExperiencesRoute
+  '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/entreprises': typeof EntreprisesRoute
+  '/experiences': typeof ExperiencesRoute
+  '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/entreprises'
+    | '/experiences'
+    | '/voyage-sur-mesure'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/contact' | '/entreprises' | '/experiences' | '/voyage-sur-mesure'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/entreprises'
+    | '/experiences'
+    | '/voyage-sur-mesure'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  EntreprisesRoute: typeof EntreprisesRoute
+  ExperiencesRoute: typeof ExperiencesRoute
+  VoyageSurMesureRoute: typeof VoyageSurMesureRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/voyage-sur-mesure': {
+      id: '/voyage-sur-mesure'
+      path: '/voyage-sur-mesure'
+      fullPath: '/voyage-sur-mesure'
+      preLoaderRoute: typeof VoyageSurMesureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entreprises': {
+      id: '/entreprises'
+      path: '/entreprises'
+      fullPath: '/entreprises'
+      preLoaderRoute: typeof EntreprisesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +132,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  EntreprisesRoute: EntreprisesRoute,
+  ExperiencesRoute: ExperiencesRoute,
+  VoyageSurMesureRoute: VoyageSurMesureRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
