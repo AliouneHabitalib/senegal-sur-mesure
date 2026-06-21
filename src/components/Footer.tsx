@@ -12,8 +12,8 @@ export function Footer() {
             <span className="font-display text-xl font-semibold">Diambar Travel Tour</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
-            Agence de voyage sénégalaise spécialisée dans les séjours 100% sur mesure
-            avec accompagnement local et guide privé.
+            Guide indépendant sénégalais spécialisé dans les séjours 100% sur mesure
+            avec accompagnement local privé.
           </p>
         </div>
         <div>
