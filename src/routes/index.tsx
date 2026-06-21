@@ -68,7 +68,7 @@ function Index() {
         <div className="container relative mx-auto px-4 py-24 md:px-6">
           <div className="max-w-3xl text-white">
             <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
-              Agence de voyage au Sénégal
+              Guide indépendant au Sénégal
             </span>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-balance md:text-7xl">
               Découvrez le Sénégal autrement, avec un voyage 100% sur mesure
@@ -129,10 +129,10 @@ function Index() {
       {/* INTRO */}
       <section className="py-20 md:py-24">
         <div className="container mx-auto max-w-3xl px-4 text-center md:px-6">
-          <h2 className="font-display text-3xl font-bold md:text-4xl">Une agence, une vision : votre Sénégal</h2>
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Un guide, une vision : votre Sénégal</h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            <strong className="text-foreground">DIAMBAR TRAVEL TOUR</strong> est une agence spécialisée dans
-            les voyages personnalisés au Sénégal, avec accompagnement local et guide dédié. Nous concevons
+            <strong className="text-foreground">DIAMBAR TRAVEL TOUR</strong> est un guide indépendant spécialisé dans
+            les voyages personnalisés au Sénégal, avec accompagnement local dédié. Nous concevons
             chaque séjour comme une œuvre unique, à votre image.
           </p>
         </div>
