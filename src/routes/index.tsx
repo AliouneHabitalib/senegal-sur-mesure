@@ -300,6 +300,25 @@ function Index() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="bg-muted/40 py-20 md:py-28">
+        <div className="container mx-auto max-w-3xl px-4 md:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-accent">FAQ</span>
+            <h2 className="mt-2 font-display text-4xl font-bold md:text-5xl">Questions fréquentes</h2>
+            <p className="mt-4 text-muted-foreground">Tout ce qu'il faut savoir avant de préparer votre séjour au Sénégal.</p>
+          </div>
+          <Accordion type="single" collapsible className="mt-12">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger className="text-left font-display text-lg font-semibold">{f.q}</AccordionTrigger>
+                <AccordionContent className="text-base leading-relaxed text-muted-foreground">{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
