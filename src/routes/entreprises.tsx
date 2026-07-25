@@ -6,10 +6,11 @@ import { Briefcase, Users, Award, CheckCircle2, Send } from "lucide-react";
 export const Route = createFileRoute("/entreprises")({
   head: () => ({
     meta: [
-      { title: "Voyages d'affaires & séminaires au Sénégal — Diambar" },
-      { name: "description", content: "Séminaires, team building, voyages d'affaires au Sénégal. Organisation clé en main pour votre entreprise." },
-      { property: "og:title", content: "Entreprises — Séminaires & team building au Sénégal" },
-      { property: "og:description", content: "Voyages d'entreprise sur mesure au Sénégal." },
+      { title: "Séminaires & team building au Sénégal — Diambar, guide indépendant" },
+      { name: "description", content: "Séminaires d'entreprise, team building et voyages d'affaires au Sénégal. Organisation clé en main par un guide indépendant local." },
+      { name: "keywords", content: "séminaire entreprise Sénégal, team building Sénégal, voyage d'affaires Dakar, incentive Sénégal, organisation séminaire Dakar, événement entreprise Sénégal, MICE Sénégal, guide indépendant entreprise" },
+      { property: "og:title", content: "Séminaires & team building au Sénégal — Diambar" },
+      { property: "og:description", content: "Voyages d'entreprise sur mesure au Sénégal avec un guide indépendant." },
     ],
   }),
   component: Page,
