@@ -11,6 +11,30 @@ import saintLouis from "@/assets/saint-louis.jpg";
 import safari from "@/assets/safari.jpg";
 import culture from "@/assets/culture.jpg";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Combien coûte un voyage sur mesure au Sénégal ?",
+    a: "Le tarif dépend de la durée du séjour, du nombre de voyageurs, du niveau de confort choisi (hébergements, transport privé, activités) et de la saison. Chaque itinéraire étant unique, nous établissons un devis personnalisé et gratuit sous 24h après réception de votre demande.",
+  },
+  {
+    q: "Ai-je besoin d'un visa pour voyager au Sénégal ?",
+    a: "Les conditions d'entrée varient selon votre nationalité. Les ressortissants de nombreux pays (dont la France, la Belgique, la Suisse et le Canada) sont dispensés de visa pour un séjour touristique inférieur à 90 jours, mais un passeport valide au moins 6 mois est requis. Vérifiez toujours les formalités à jour auprès du consulat avant votre départ.",
+  },
+  {
+    q: "Quelle est la meilleure période pour visiter le Sénégal ?",
+    a: "La saison sèche, de novembre à mai, est généralement la période la plus agréable : températures douces, faible humidité et ciel dégagé, idéale pour découvrir Dakar, le désert de Lompoul, le Sine Saloum ou Saint-Louis. La saison des pluies (juillet à octobre) offre des paysages plus verts mais des averses ponctuelles.",
+  },
+  {
+    q: "Diambar parle-t-il anglais ?",
+    a: "Diambar est un guide francophone et parle également wolof, la langue locale. Pour les voyageurs anglophones, un accompagnement bilingue peut être organisé sur demande afin de garantir une expérience fluide et conviviale tout au long du séjour.",
+  },
+  {
+    q: "Comment se déroule l'organisation du voyage avec Diambar ?",
+    a: "Vous remplissez le formulaire de voyage sur mesure en précisant vos envies, dates et budget. Nous échangeons ensuite par email ou WhatsApp pour affiner l'itinéraire, puis nous vous envoyons un devis détaillé sous 24h. Après confirmation, Diambar prend en charge l'ensemble de la logistique et vous accueille dès votre arrivée à Dakar.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
