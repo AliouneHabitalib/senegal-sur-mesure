@@ -11,6 +11,30 @@ import saintLouis from "@/assets/saint-louis.jpg";
 import safari from "@/assets/safari.jpg";
 import culture from "@/assets/culture.jpg";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Combien coûte un voyage sur mesure au Sénégal ?",
+    a: "Le tarif dépend de la durée du séjour, du nombre de voyageurs, du niveau de confort choisi (hébergements, transport privé, activités) et de la saison. Chaque itinéraire étant unique, nous établissons un devis personnalisé et gratuit sous 24h après réception de votre demande.",
+  },
+  {
+    q: "Ai-je besoin d'un visa pour voyager au Sénégal ?",
+    a: "Les conditions d'entrée varient selon votre nationalité. Les ressortissants de nombreux pays (dont la France, la Belgique, la Suisse et le Canada) sont dispensés de visa pour un séjour touristique inférieur à 90 jours, mais un passeport valide au moins 6 mois est requis. Vérifiez toujours les formalités à jour auprès du consulat avant votre départ.",
+  },
+  {
+    q: "Quelle est la meilleure période pour visiter le Sénégal ?",
+    a: "La saison sèche, de novembre à mai, est généralement la période la plus agréable : températures douces, faible humidité et ciel dégagé, idéale pour découvrir Dakar, le désert de Lompoul, le Sine Saloum ou Saint-Louis. La saison des pluies (juillet à octobre) offre des paysages plus verts mais des averses ponctuelles.",
+  },
+  {
+    q: "Diambar parle-t-il anglais ?",
+    a: "Diambar est un guide francophone et parle également wolof, la langue locale. Pour les voyageurs anglophones, un accompagnement bilingue peut être organisé sur demande afin de garantir une expérience fluide et conviviale tout au long du séjour.",
+  },
+  {
+    q: "Comment se déroule l'organisation du voyage avec Diambar ?",
+    a: "Vous remplissez le formulaire de voyage sur mesure en précisant vos envies, dates et budget. Nous échangeons ensuite par email ou WhatsApp pour affiner l'itinéraire, puis nous vous envoyons un devis détaillé sous 24h. Après confirmation, Diambar prend en charge l'ensemble de la logistique et vous accueille dès votre arrivée à Dakar.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,17 +46,31 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.senegal-sur-mesure.com/" },
     ],
     links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: Index,
 });
 
 const destinations = [
-  { name: "Dakar", img: dakar, desc: "Capitale vibrante entre océan et culture" },
-  { name: "Île de Gorée", img: goree, desc: "Mémoire et beauté coloniale" },
-  { name: "Lac Rose", img: lacRose, desc: "Lagon rosé unique au monde" },
-  { name: "Sine Saloum", img: sineSaloum, desc: "Mangroves et villages de pêcheurs" },
-  { name: "Lompoul", img: lompoul, desc: "Désert de dunes orangées" },
-  { name: "Saint-Louis", img: saintLouis, desc: "Joyau classé UNESCO" },
+  { name: "Dakar", img: dakar, desc: "Capitale vibrante entre océan et culture, où marchés colorés, musique mbalax et front de mer atlantique donnent le ton du voyage." },
+  { name: "Île de Gorée", img: goree, desc: "Mémoire et beauté coloniale à 20 minutes en chaloupe de Dakar. Ruelles pavées, Maison des Esclaves et palette d'ocre classée à l'UNESCO." },
+  { name: "Lac Rose", img: lacRose, desc: "Lagon rosé unique au monde, dû à une micro-algue et à la forte salinité. Rencontre avec les récolteurs de sel et dunes bordant l'Atlantique." },
+  { name: "Sine Saloum", img: sineSaloum, desc: "Mangroves et villages de pêcheurs au cœur d'un delta classé réserve de biosphère. Sorties en pirogue, îles aux coquillages et lodges au bord de l'eau." },
+  { name: "Lompoul", img: lompoul, desc: "Désert de dunes orangées entre Dakar et Saint-Louis. Nuit sous tente mauritanienne, coucher de soleil sur les crêtes et ciel étoilé." },
+  { name: "Saint-Louis", img: saintLouis, desc: "Ancienne capitale de l'AOF classée UNESCO, entre fleuve et océan. Architecture coloniale, festival de jazz et Langue de Barbarie à explorer." },
 ];
 
 const reasons = [
@@ -259,6 +297,25 @@ function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-muted/40 py-20 md:py-28">
+        <div className="container mx-auto max-w-3xl px-4 md:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-accent">FAQ</span>
+            <h2 className="mt-2 font-display text-4xl font-bold md:text-5xl">Questions fréquentes</h2>
+            <p className="mt-4 text-muted-foreground">Tout ce qu'il faut savoir avant de préparer votre séjour au Sénégal.</p>
+          </div>
+          <Accordion type="single" collapsible className="mt-12">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger className="text-left font-display text-lg font-semibold">{f.q}</AccordionTrigger>
+                <AccordionContent className="text-base leading-relaxed text-muted-foreground">{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
