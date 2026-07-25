@@ -17,7 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border/50 bg-background/85 backdrop-blur-md">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Diambar Travel Tour" className="h-12 w-auto" />
+          <img src={logo} alt="Diambar Travel Tour" width={160} height={48} className="h-12 w-auto" decoding="async" />
           <span className="hidden font-display text-lg font-semibold text-primary sm:block">
             sénégal sur mesure
           </span>
