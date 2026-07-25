@@ -65,12 +65,12 @@ export const Route = createFileRoute("/")({
 });
 
 const destinations = [
-  { name: "Dakar", img: dakar, desc: "Capitale vibrante entre océan et culture" },
-  { name: "Île de Gorée", img: goree, desc: "Mémoire et beauté coloniale" },
-  { name: "Lac Rose", img: lacRose, desc: "Lagon rosé unique au monde" },
-  { name: "Sine Saloum", img: sineSaloum, desc: "Mangroves et villages de pêcheurs" },
-  { name: "Lompoul", img: lompoul, desc: "Désert de dunes orangées" },
-  { name: "Saint-Louis", img: saintLouis, desc: "Joyau classé UNESCO" },
+  { name: "Dakar", img: dakar, desc: "Capitale vibrante entre océan et culture, où marchés colorés, musique mbalax et front de mer atlantique donnent le ton du voyage." },
+  { name: "Île de Gorée", img: goree, desc: "Mémoire et beauté coloniale à 20 minutes en chaloupe de Dakar. Ruelles pavées, Maison des Esclaves et palette d'ocre classée à l'UNESCO." },
+  { name: "Lac Rose", img: lacRose, desc: "Lagon rosé unique au monde, dû à une micro-algue et à la forte salinité. Rencontre avec les récolteurs de sel et dunes bordant l'Atlantique." },
+  { name: "Sine Saloum", img: sineSaloum, desc: "Mangroves et villages de pêcheurs au cœur d'un delta classé réserve de biosphère. Sorties en pirogue, îles aux coquillages et lodges au bord de l'eau." },
+  { name: "Lompoul", img: lompoul, desc: "Désert de dunes orangées entre Dakar et Saint-Louis. Nuit sous tente mauritanienne, coucher de soleil sur les crêtes et ciel étoilé." },
+  { name: "Saint-Louis", img: saintLouis, desc: "Ancienne capitale de l'AOF classée UNESCO, entre fleuve et océan. Architecture coloniale, festival de jazz et Langue de Barbarie à explorer." },
 ];
 
 const reasons = [
