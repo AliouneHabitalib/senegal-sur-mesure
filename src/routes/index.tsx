@@ -16,10 +16,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Sénégal sur mesure — Voyage personnalisé avec Diambar" },
-      { name: "description", content: "Découvrez le Sénégal autrement. Séjours 100% sur mesure avec Diambar, guide local passionné. Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul." },
+      { name: "description", content: "Voyage 100% sur mesure au Sénégal avec Diambar, guide local indépendant. Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul." },
       { property: "og:title", content: "Sénégal sur mesure — Voyage personnalisé avec Diambar" },
-      { property: "og:description", content: "Découvrez le Sénégal autrement. Séjours 100% sur mesure avec Diambar, guide local passionné. Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul." },
+      { property: "og:description", content: "Voyage 100% sur mesure au Sénégal avec Diambar, guide local indépendant. Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul." },
+      { property: "og:url", content: "https://www.senegal-sur-mesure.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/" }],
   }),
   component: Index,
 });
@@ -216,9 +218,18 @@ function Index() {
             <h2 className="mt-2 font-display text-4xl font-bold md:text-5xl">Le Sénégal en images</h2>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {[safari, culture, lacRose, lompoul, sineSaloum, goree, saintLouis, dakar].map((img, i) => (
+            {[
+              { src: safari, alt: "Safari au Sénégal, faune de la réserve de Bandia" },
+              { src: culture, alt: "Scène culturelle traditionnelle sénégalaise" },
+              { src: lacRose, alt: "Lac Rose (Retba) aux eaux rosées près de Dakar" },
+              { src: lompoul, alt: "Dunes orangées du désert de Lompoul au Sénégal" },
+              { src: sineSaloum, alt: "Mangroves du Sine Saloum en pirogue" },
+              { src: goree, alt: "Île de Gorée, patrimoine UNESCO au large de Dakar" },
+              { src: saintLouis, alt: "Architecture coloniale de Saint-Louis du Sénégal" },
+              { src: dakar, alt: "Vue urbaine de Dakar, capitale du Sénégal" },
+            ].map((img, i) => (
               <div key={i} className={`overflow-hidden rounded-xl ${i === 0 || i === 5 ? "row-span-2" : ""}`}>
-                <img src={img} alt="" loading="lazy" className="h-full w-full object-cover transition-smooth hover:scale-110" />
+                <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-smooth hover:scale-110" />
               </div>
             ))}
           </div>

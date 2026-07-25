@@ -10,13 +10,15 @@ export const Route = createFileRoute("/experiences")({
   head: () => ({
     meta: [
       { title: "Expériences au Sénégal — Safari, plages, désert, culture" },
-      { name: "description", content: "Expériences signature au Sénégal avec un guide indépendant : safari Bandia, îles paradisiaques, désert de Lompoul, villages traditionnels, excursions en pirogue." },
+      { name: "description", content: "Expériences signature au Sénégal : safari Bandia, îles paradisiaques, désert de Lompoul, villages traditionnels, excursions en pirogue." },
       { name: "keywords", content: "expériences Sénégal, safari Bandia, safari Fathala, désert Lompoul, îles du Saloum, plages Sénégal, excursion pirogue, villages traditionnels Sénégal, culture sérère wolof, activités Sénégal, guide indépendant Sénégal" },
       { property: "og:title", content: "Expériences au Sénégal — Diambar Travel Tour" },
       { property: "og:description", content: "Safari, plages, désert, culture : nos expériences signature avec guide indépendant." },
       { property: "og:image", content: safari },
+      { property: "og:url", content: "https://www.senegal-sur-mesure.com/experiences" },
       { name: "twitter:image", content: safari },
     ],
+    links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/experiences" }],
   }),
   component: Page,
 });

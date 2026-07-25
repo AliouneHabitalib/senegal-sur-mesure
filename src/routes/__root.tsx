@@ -48,6 +48,26 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: "Diambar Travel Tour",
+          description: "Guide indépendant francophone au Sénégal, spécialisé dans les voyages 100% sur mesure.",
+          url: "https://www.senegal-sur-mesure.com",
+          telephone: "+221756320437",
+          email: "diambarseck1@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Dakar",
+            addressCountry: "SN",
+          },
+          areaServed: "Sénégal",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
