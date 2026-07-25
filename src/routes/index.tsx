@@ -21,6 +21,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Guide indépendant au Sénégal — Diambar Travel Tour" },
       { property: "og:description", content: "Voyages 100% sur mesure au Sénégal avec un guide privé francophone." },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
   }),
   component: Index,
 });
@@ -64,6 +67,8 @@ function Index() {
           className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container relative mx-auto px-4 py-24 md:px-6">
