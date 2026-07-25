@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VoyageSurMesureRouteImport } from './routes/voyage-sur-mesure'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as EntreprisesRouteImport } from './routes/entreprises'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VoyageSurMesureRoute = VoyageSurMesureRouteImport.update({
   id: '/voyage-sur-mesure',
   path: '/voyage-sur-mesure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExperiencesRoute = ExperiencesRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/entreprises': typeof EntreprisesRoute
   '/experiences': typeof ExperiencesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/entreprises': typeof EntreprisesRoute
   '/experiences': typeof ExperiencesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRoutesById {
@@ -61,6 +69,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/entreprises': typeof EntreprisesRoute
   '/experiences': typeof ExperiencesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
 }
 export interface FileRouteTypes {
@@ -70,15 +79,23 @@ export interface FileRouteTypes {
     | '/contact'
     | '/entreprises'
     | '/experiences'
+    | '/sitemap.xml'
     | '/voyage-sur-mesure'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/entreprises' | '/experiences' | '/voyage-sur-mesure'
+  to:
+    | '/'
+    | '/contact'
+    | '/entreprises'
+    | '/experiences'
+    | '/sitemap.xml'
+    | '/voyage-sur-mesure'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/entreprises'
     | '/experiences'
+    | '/sitemap.xml'
     | '/voyage-sur-mesure'
   fileRoutesById: FileRoutesById
 }
@@ -87,6 +104,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EntreprisesRoute: typeof EntreprisesRoute
   ExperiencesRoute: typeof ExperiencesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VoyageSurMesureRoute: typeof VoyageSurMesureRoute
 }
 
@@ -97,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/voyage-sur-mesure'
       fullPath: '/voyage-sur-mesure'
       preLoaderRoute: typeof VoyageSurMesureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experiences': {
@@ -135,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EntreprisesRoute: EntreprisesRoute,
   ExperiencesRoute: ExperiencesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   VoyageSurMesureRoute: VoyageSurMesureRoute,
 }
 export const routeTree = rootRouteImport
