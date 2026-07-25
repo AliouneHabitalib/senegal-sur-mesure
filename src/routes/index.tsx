@@ -46,6 +46,20 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.senegal-sur-mesure.com/" },
     ],
     links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: Index,
 });
