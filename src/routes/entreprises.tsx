@@ -11,7 +11,9 @@ export const Route = createFileRoute("/entreprises")({
       { name: "keywords", content: "séminaire entreprise Sénégal, team building Sénégal, voyage d'affaires Dakar, incentive Sénégal, organisation séminaire Dakar, événement entreprise Sénégal, MICE Sénégal, guide indépendant entreprise" },
       { property: "og:title", content: "Séminaires & team building au Sénégal — Diambar" },
       { property: "og:description", content: "Voyages d'entreprise sur mesure au Sénégal avec un guide indépendant." },
+      { property: "og:url", content: "https://www.senegal-sur-mesure.com/entreprises" },
     ],
+    links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/entreprises" }],
   }),
   component: Page,
 });

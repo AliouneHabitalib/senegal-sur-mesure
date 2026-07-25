@@ -10,7 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "keywords", content: "contact guide Sénégal, guide indépendant Dakar contact, WhatsApp guide Sénégal, Diambar Travel Tour contact, réserver guide Sénégal" },
       { property: "og:title", content: "Contact — Diambar, guide indépendant au Sénégal" },
       { property: "og:description", content: "Joignez-nous via WhatsApp, email, ou directement à Dakar." },
+      { property: "og:url", content: "https://www.senegal-sur-mesure.com/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/contact" }],
   }),
   component: Page,
 });

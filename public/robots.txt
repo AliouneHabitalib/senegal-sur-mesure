@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://senegal-sur-mesure.lovable.app/sitemap.xml
+Sitemap: https://www.senegal-sur-mesure.com/sitemap.xml

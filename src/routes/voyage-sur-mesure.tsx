@@ -7,11 +7,13 @@ export const Route = createFileRoute("/voyage-sur-mesure")({
   head: () => ({
     meta: [
       { title: "Voyage sur mesure au Sénégal — Guide indépendant Diambar" },
-      { name: "description", content: "Créez votre séjour personnalisé au Sénégal avec un guide indépendant francophone. Itinéraire 100% sur mesure, devis gratuit sous 24h." },
+      { name: "description", content: "Créez votre séjour personnalisé au Sénégal avec un guide indépendant francophone. Itinéraire sur mesure, devis gratuit sous 24h." },
       { name: "keywords", content: "voyage sur mesure Sénégal, séjour personnalisé Sénégal, guide indépendant Sénégal, guide privé francophone, circuit Sénégal sur mesure, itinéraire Sénégal, devis voyage Sénégal, organiser voyage Sénégal" },
       { property: "og:title", content: "Créer mon voyage sur mesure au Sénégal — Diambar" },
       { property: "og:description", content: "Itinéraire personnalisé, guide indépendant privé, expérience authentique." },
+      { property: "og:url", content: "https://www.senegal-sur-mesure.com/voyage-sur-mesure" },
     ],
+    links: [{ rel: "canonical", href: "https://www.senegal-sur-mesure.com/voyage-sur-mesure" }],
   }),
   component: Page,
 });
