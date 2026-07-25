@@ -6,10 +6,11 @@ import { Send, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/voyage-sur-mesure")({
   head: () => ({
     meta: [
-      { title: "Voyage sur mesure au Sénégal — Diambar Travel Tour" },
-      { name: "description", content: "Créez votre séjour personnalisé au Sénégal. Décrivez vos envies, recevez un itinéraire 100% sur mesure sous 24h." },
-      { property: "og:title", content: "Créer mon voyage sur mesure au Sénégal" },
-      { property: "og:description", content: "Itinéraire personnalisé, guide privé, expérience authentique." },
+      { title: "Voyage sur mesure au Sénégal — Guide indépendant Diambar" },
+      { name: "description", content: "Créez votre séjour personnalisé au Sénégal avec un guide indépendant francophone. Itinéraire 100% sur mesure, devis gratuit sous 24h." },
+      { name: "keywords", content: "voyage sur mesure Sénégal, séjour personnalisé Sénégal, guide indépendant Sénégal, guide privé francophone, circuit Sénégal sur mesure, itinéraire Sénégal, devis voyage Sénégal, organiser voyage Sénégal" },
+      { property: "og:title", content: "Créer mon voyage sur mesure au Sénégal — Diambar" },
+      { property: "og:description", content: "Itinéraire personnalisé, guide indépendant privé, expérience authentique." },
     ],
   }),
   component: Page,

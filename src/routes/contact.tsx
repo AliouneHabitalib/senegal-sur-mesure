@@ -5,9 +5,10 @@ import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Diambar Travel Tour, Dakar" },
-      { name: "description", content: "Contactez Diambar Travel Tour à Dakar : WhatsApp +221 75 632 04 37, email diambarseck1@gmail.com." },
-      { property: "og:title", content: "Contact — Diambar Travel Tour" },
+      { title: "Contact — Diambar, guide indépendant au Sénégal (Dakar)" },
+      { name: "description", content: "Contactez Diambar, guide indépendant francophone à Dakar : WhatsApp +221 75 632 04 37, email diambarseck1@gmail.com. Réponse sous 24h." },
+      { name: "keywords", content: "contact guide Sénégal, guide indépendant Dakar contact, WhatsApp guide Sénégal, Diambar Travel Tour contact, réserver guide Sénégal" },
+      { property: "og:title", content: "Contact — Diambar, guide indépendant au Sénégal" },
       { property: "og:description", content: "Joignez-nous via WhatsApp, email, ou directement à Dakar." },
     ],
   }),

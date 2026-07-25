@@ -15,10 +15,11 @@ import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-r
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sénégal sur mesure — Voyage personnalisé avec Diambar" },
-      { name: "description", content: "Découvrez le Sénégal autrement. Séjours 100% sur mesure avec Diambar, guide local passionné. Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul." },
-      { property: "og:title", content: "Sénégal sur mesure — Diambar Travel Tour" },
-      { property: "og:description", content: "Voyage 100% sur mesure au Sénégal avec guide privé." },
+      { title: "Guide indépendant au Sénégal — Voyage sur mesure avec Diambar" },
+      { name: "description", content: "Diambar, guide indépendant francophone au Sénégal. Voyages 100% sur mesure : Dakar, Gorée, Lac Rose, Saint-Louis, désert de Lompoul, Sine Saloum. Devis sous 24h." },
+      { name: "keywords", content: "guide indépendant Sénégal, guide privé Sénégal, guide francophone Dakar, voyage sur mesure Sénégal, circuit Sénégal, séjour personnalisé Sénégal, safari Bandia, désert Lompoul, Lac Rose, Sine Saloum, Saint-Louis Sénégal, Gorée, tourisme Sénégal" },
+      { property: "og:title", content: "Guide indépendant au Sénégal — Diambar Travel Tour" },
+      { property: "og:description", content: "Voyages 100% sur mesure au Sénégal avec un guide privé francophone." },
     ],
   }),
   component: Index,
