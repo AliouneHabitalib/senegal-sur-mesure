@@ -36,6 +36,12 @@ const faqs = [
   },
 ];
 
+const testimonials = [
+  { name: "Sophie & Marc", text: "Un voyage inoubliable ! Diambar est attentif, drôle et nous a fait découvrir un Sénégal authentique. Une famille de cœur.", rating: 5 },
+  { name: "Famille Dupont", text: "Organisation parfaite, guide passionnant, hébergements de qualité. Nos enfants en parlent encore !", rating: 5 },
+  { name: "Caroline L.", text: "Le voyage de notre vie. Tout était sur mesure, du désert de Lompoul aux îles du Saloum. Merci Diambar !", rating: 5 },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -56,6 +62,31 @@ export const Route = createFileRoute("/")({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: "Diambar Travel Tour",
+          url: "https://www.senegal-sur-mesure.com",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: 5,
+            reviewCount: 3,
+            bestRating: 5,
+          },
+          review: testimonials.map((t) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: t.name },
+            reviewBody: t.text,
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: t.rating,
+              bestRating: 5,
+            },
           })),
         }),
       },
