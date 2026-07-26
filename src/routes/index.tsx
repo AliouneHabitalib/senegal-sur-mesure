@@ -12,6 +12,7 @@ import safari from "@/assets/safari.avif";
 import culture from "@/assets/culture.avif";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { destinations as allDestinations } from "@/data/destinations";
 
 const faqs = [
   {
@@ -95,14 +96,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const destinations = [
-  { name: "Dakar", img: dakar, desc: "Capitale vibrante entre océan et culture, où marchés colorés, musique mbalax et front de mer atlantique donnent le ton du voyage." },
-  { name: "Île de Gorée", img: goree, desc: "Mémoire et beauté coloniale à 20 minutes en chaloupe de Dakar. Ruelles pavées, Maison des Esclaves et palette d'ocre classée à l'UNESCO." },
-  { name: "Lac Rose", img: lacRose, desc: "Lagon rosé unique au monde, dû à une micro-algue et à la forte salinité. Rencontre avec les récolteurs de sel et dunes bordant l'Atlantique." },
-  { name: "Sine Saloum", img: sineSaloum, desc: "Mangroves et villages de pêcheurs au cœur d'un delta classé réserve de biosphère. Sorties en pirogue, îles aux coquillages et lodges au bord de l'eau." },
-  { name: "Lompoul", img: lompoul, desc: "Désert de dunes orangées entre Dakar et Saint-Louis. Nuit sous tente mauritanienne, coucher de soleil sur les crêtes et ciel étoilé." },
-  { name: "Saint-Louis", img: saintLouis, desc: "Ancienne capitale de l'AOF classée UNESCO, entre fleuve et océan. Architecture coloniale, festival de jazz et Langue de Barbarie à explorer." },
-];
+const destinations = allDestinations;
+
 
 const reasons = [
   { icon: MapPin, title: "Expertise locale", desc: "Une connaissance intime du terrain et des plus beaux secrets du Sénégal." },
@@ -235,14 +230,22 @@ function Index() {
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {destinations.map((d) => (
-              <article key={d.name} className="group relative overflow-hidden rounded-2xl shadow-soft">
-                <img src={d.img} alt={d.name} loading="lazy" width={1280} height={832} className="h-72 w-full object-cover transition-smooth group-hover:scale-110" />
+              <Link
+                key={d.name}
+                to="/destinations/$slug"
+                params={{ slug: d.slug }}
+                className="group relative block overflow-hidden rounded-2xl shadow-soft transition-smooth hover:shadow-card"
+              >
+                <img src={d.img} alt={d.alt} loading="lazy" width={1280} height={832} className="h-72 w-full object-cover transition-smooth group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                   <h3 className="font-display text-2xl font-semibold">{d.name}</h3>
                   <p className="mt-1 text-sm text-white/85">{d.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-white transition-all group-hover:gap-2">
+                    Découvrir <ArrowRight className="h-4 w-4" />
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
