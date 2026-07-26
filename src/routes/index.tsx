@@ -230,14 +230,22 @@ function Index() {
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {destinations.map((d) => (
-              <article key={d.name} className="group relative overflow-hidden rounded-2xl shadow-soft">
-                <img src={d.img} alt={d.name} loading="lazy" width={1280} height={832} className="h-72 w-full object-cover transition-smooth group-hover:scale-110" />
+              <Link
+                key={d.name}
+                to="/destinations/$slug"
+                params={{ slug: d.slug }}
+                className="group relative block overflow-hidden rounded-2xl shadow-soft transition-smooth hover:shadow-card"
+              >
+                <img src={d.img} alt={d.alt} loading="lazy" width={1280} height={832} className="h-72 w-full object-cover transition-smooth group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                   <h3 className="font-display text-2xl font-semibold">{d.name}</h3>
                   <p className="mt-1 text-sm text-white/85">{d.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-white transition-all group-hover:gap-2">
+                    Découvrir <ArrowRight className="h-4 w-4" />
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
