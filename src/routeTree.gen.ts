@@ -15,6 +15,7 @@ import { Route as EntreprisesRouteImport } from './routes/entreprises'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as VoyageSurMesureRouteImport } from './routes/voyage-sur-mesure'
+import { Route as DestinationsSlugRouteImport } from './routes/destinations/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const VoyageSurMesureRoute = VoyageSurMesureRouteImport.update({
   path: '/voyage-sur-mesure',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
+  id: '/destinations/$slug',
+  path: '/destinations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/experiences': typeof ExperiencesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/experiences': typeof ExperiencesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/experiences': typeof ExperiencesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/voyage-sur-mesure': typeof VoyageSurMesureRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/experiences'
     | '/sitemap.xml'
     | '/voyage-sur-mesure'
+    | '/destinations/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/experiences'
     | '/sitemap.xml'
     | '/voyage-sur-mesure'
+    | '/destinations/$slug'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/experiences'
     | '/sitemap.xml'
     | '/voyage-sur-mesure'
+    | '/destinations/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   ExperiencesRoute: typeof ExperiencesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VoyageSurMesureRoute: typeof VoyageSurMesureRoute
+  DestinationsSlugRoute: typeof DestinationsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VoyageSurMesureRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destinations/$slug': {
+      id: '/destinations/$slug'
+      path: '/destinations/$slug'
+      fullPath: '/destinations/$slug'
+      preLoaderRoute: typeof DestinationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,16 +182,8 @@ const rootRouteChildren: RootRouteChildren = {
   ExperiencesRoute: ExperiencesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VoyageSurMesureRoute: VoyageSurMesureRoute,
+  DestinationsSlugRoute: DestinationsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

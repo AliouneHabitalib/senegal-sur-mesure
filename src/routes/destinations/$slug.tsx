@@ -97,7 +97,7 @@ function DestinationPage() {
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {d.highlights.map((h) => (
+            {d.highlights.map((h: { title: string; text: string }) => (
               <article key={h.title} className="rounded-2xl bg-card p-6 shadow-soft transition-smooth hover:shadow-card">
                 <MapPin className="h-8 w-8 text-primary" />
                 <h3 className="mt-4 font-display text-xl font-semibold">{h.title}</h3>
