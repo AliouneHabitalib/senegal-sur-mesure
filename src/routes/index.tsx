@@ -111,11 +111,6 @@ const reasons = [
   { icon: Heart, title: "Expérience authentique", desc: "Rencontres vraies, immersion culturelle, hospitalité sénégalaise." },
 ];
 
-const testimonials = [
-  { name: "Sophie & Marc", text: "Un voyage inoubliable ! Diambar est attentif, drôle et nous a fait découvrir un Sénégal authentique. Une famille de cœur.", rating: 5 },
-  { name: "Famille Dupont", text: "Organisation parfaite, guide passionnant, hébergements de qualité. Nos enfants en parlent encore !", rating: 5 },
-  { name: "Caroline L.", text: "Le voyage de notre vie. Tout était sur mesure, du désert de Lompoul aux îles du Saloum. Merci Diambar !", rating: 5 },
-];
 
 const circuits = [
   { name: "Découverte du Sénégal", days: "8 jours", desc: "Dakar, Gorée, Saly, Bandia, Lac Rose", img: dakar },
