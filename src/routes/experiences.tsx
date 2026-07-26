@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import safari from "@/assets/safari.jpg";
-import goree from "@/assets/goree.jpg";
-import lompoul from "@/assets/desert-lompoul.jpg";
-import culture from "@/assets/culture.jpg";
-import sineSaloum from "@/assets/sine-saloum.jpg";
+import safari from "@/assets/safari.avif";
+import goree from "@/assets/goree.avif";
+import lompoul from "@/assets/desert-lompoul.avif";
+import culture from "@/assets/culture.avif";
+import sineSaloum from "@/assets/sine-saloum.avif";
 
 export const Route = createFileRoute("/experiences")({
   head: () => ({
