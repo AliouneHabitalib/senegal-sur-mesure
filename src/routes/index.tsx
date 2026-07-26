@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import heroImg from "@/assets/hero-senegal.jpg";
-import guideImg from "@/assets/guide-diambar.jpg";
-import dakar from "@/assets/dakar.jpg";
-import goree from "@/assets/goree.jpg";
-import lacRose from "@/assets/lac-rose.jpg";
-import sineSaloum from "@/assets/sine-saloum.jpg";
-import lompoul from "@/assets/desert-lompoul.jpg";
-import saintLouis from "@/assets/saint-louis.jpg";
-import safari from "@/assets/safari.jpg";
-import culture from "@/assets/culture.jpg";
+import heroImg from "@/assets/hero-senegal.avif";
+import guideImg from "@/assets/guide-diambar.avif";
+import dakar from "@/assets/dakar.avif";
+import goree from "@/assets/goree.avif";
+import lacRose from "@/assets/lac-rose.avif";
+import sineSaloum from "@/assets/sine-saloum.avif";
+import lompoul from "@/assets/desert-lompoul.avif";
+import saintLouis from "@/assets/saint-louis.avif";
+import safari from "@/assets/safari.avif";
+import culture from "@/assets/culture.avif";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
