@@ -12,6 +12,7 @@ import lompoulTentes from "@/assets/lompoul-tentes.avif";
 import lompoulJump from "@/assets/lompoul-jump.avif";
 import okaiPiscine from "@/assets/okai-piscine.avif";
 import okaiCamels from "@/assets/okai-camels.avif";
+import diambarSineSaloum from "@/assets/diambar-sine-saloum.avif";
 
 export interface GalleryImage {
   src: string;
@@ -113,6 +114,9 @@ export const destinations: Destination[] = [
       { title: "Réserve de biosphère UNESCO", text: "Un écosystème protégé entre fleuve, océan et forêt." },
       { title: "Observation d'oiseaux", text: "Hérons, flamants, pélicans et sternes selon la saison." },
       { title: "Lodges au bord de l'eau", text: "Des hébergements calmes, les pieds dans le delta." },
+    ],
+    gallery: [
+      { src: diambarSineSaloum, alt: "Diambar, guide indépendant, aux côtés d'une pirogue traditionnelle dans les mangroves du Sine Saloum" },
     ],
   },
   {
