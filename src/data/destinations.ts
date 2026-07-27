@@ -115,6 +115,9 @@ export const destinations: Destination[] = [
       { title: "Observation d'oiseaux", text: "Hérons, flamants, pélicans et sternes selon la saison." },
       { title: "Lodges au bord de l'eau", text: "Des hébergements calmes, les pieds dans le delta." },
     ],
+    gallery: [
+      { src: diambarSineSaloum, alt: "Diambar, guide indépendant, aux côtés d'une pirogue traditionnelle dans les mangroves du Sine Saloum" },
+    ],
   },
   {
     slug: "lompoul",
