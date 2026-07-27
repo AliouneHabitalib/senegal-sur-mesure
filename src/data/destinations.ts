@@ -89,7 +89,12 @@ export const destinations: Destination[] = [
       { title: "Sortie en quad ou 4x4", text: "Explorer les pistes et les villages des environs autrement." },
       { title: "Coucher de soleil sur le lac", text: "Le meilleur moment pour saisir les nuances de couleur." },
     ],
+    gallery: [
+      { src: lacRoseBoats, alt: "Pirogues colorées aux couleurs du Sénégal amarrées sur les rives du Lac Rose" },
+      { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
+    ],
   },
+
   {
     slug: "sine-saloum",
     name: "Sine Saloum",
