@@ -117,7 +117,33 @@ function DestinationPage() {
         </div>
       </section>
 
+      {/* GALERIE */}
+      {d.gallery && d.gallery.length > 0 && (
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-wider text-accent">Galerie</span>
+              <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">{d.name} en images</h2>
+            </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {d.gallery.map((g: { src: string; alt: string }, i: number) => (
+                <div key={i} className="overflow-hidden rounded-2xl shadow-soft">
+                  <img
+                    src={g.src}
+                    alt={g.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-64 w-full object-cover transition-smooth hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* AUTRES DESTINATIONS */}
+
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-center font-display text-2xl font-semibold md:text-3xl">Autres destinations</h2>

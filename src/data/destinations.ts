@@ -4,6 +4,19 @@ import lacRose from "@/assets/lac-rose.avif";
 import sineSaloum from "@/assets/sine-saloum.avif";
 import lompoul from "@/assets/desert-lompoul.avif";
 import saintLouis from "@/assets/saint-louis.avif";
+import lacRoseBoats from "@/assets/photo-lac-rose-boats.avif";
+import lacRoseFlag from "@/assets/photo-lac-rose-flag.avif";
+import lompoulDiambar from "@/assets/diambar-desert.avif";
+import lompoulRepas from "@/assets/lompoul-repas.avif";
+import lompoulTentes from "@/assets/lompoul-tentes.avif";
+import lompoulJump from "@/assets/lompoul-jump.avif";
+import okaiPiscine from "@/assets/okai-piscine.avif";
+import okaiCamels from "@/assets/okai-camels.avif";
+
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
 
 export interface Destination {
   slug: string;
@@ -15,7 +28,9 @@ export interface Destination {
   metaTitle: string;
   metaDescription: string;
   highlights: { title: string; text: string }[];
+  gallery?: GalleryImage[];
 }
+
 
 export const destinations: Destination[] = [
   {
@@ -74,7 +89,12 @@ export const destinations: Destination[] = [
       { title: "Sortie en quad ou 4x4", text: "Explorer les pistes et les villages des environs autrement." },
       { title: "Coucher de soleil sur le lac", text: "Le meilleur moment pour saisir les nuances de couleur." },
     ],
+    gallery: [
+      { src: lacRoseBoats, alt: "Pirogues colorées aux couleurs du Sénégal amarrées sur les rives du Lac Rose" },
+      { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
+    ],
   },
+
   {
     slug: "sine-saloum",
     name: "Sine Saloum",
@@ -113,7 +133,16 @@ export const destinations: Destination[] = [
       { title: "Lever et coucher de soleil", text: "Les meilleurs moments pour la lumière sur le sable." },
       { title: "Ciel étoilé", text: "Loin de toute pollution lumineuse, les nuits sont spectaculaires." },
     ],
+    gallery: [
+      { src: lompoulDiambar, alt: "Diambar, guide indépendant, bras ouverts devant le 4x4 dans le désert de Lompoul" },
+      { src: lompoulTentes, alt: "Alignement de tentes mauritaniennes au pied des dunes orangées de Lompoul" },
+      { src: lompoulJump, alt: "Groupe de voyageurs et Diambar sautant de joie sur les dunes de Lompoul" },
+      { src: lompoulRepas, alt: "Moment convivial autour d'un repas au campement de Lompoul" },
+      { src: okaiPiscine, alt: "Lodge au bord d'une piscine au coucher du soleil dans le désert de Lompoul" },
+      { src: okaiCamels, alt: "Dromadaires devant le lodge illuminé à la tombée de la nuit à Lompoul" },
+    ],
   },
+
   {
     slug: "saint-louis",
     name: "Saint-Louis",
