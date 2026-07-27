@@ -12,6 +12,7 @@ import lompoulTentes from "@/assets/lompoul-tentes.avif";
 import lompoulJump from "@/assets/lompoul-jump.avif";
 import okaiPiscine from "@/assets/okai-piscine.avif";
 import okaiCamels from "@/assets/okai-camels.avif";
+import diambarSineSaloum from "@/assets/diambar-sine-saloum.avif";
 
 export interface GalleryImage {
   src: string;
