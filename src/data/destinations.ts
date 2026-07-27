@@ -133,7 +133,16 @@ export const destinations: Destination[] = [
       { title: "Lever et coucher de soleil", text: "Les meilleurs moments pour la lumière sur le sable." },
       { title: "Ciel étoilé", text: "Loin de toute pollution lumineuse, les nuits sont spectaculaires." },
     ],
+    gallery: [
+      { src: lompoulDiambar, alt: "Diambar, guide indépendant, bras ouverts devant le 4x4 dans le désert de Lompoul" },
+      { src: lompoulTentes, alt: "Alignement de tentes mauritaniennes au pied des dunes orangées de Lompoul" },
+      { src: lompoulJump, alt: "Groupe de voyageurs et Diambar sautant de joie sur les dunes de Lompoul" },
+      { src: lompoulRepas, alt: "Moment convivial autour d'un repas au campement de Lompoul" },
+      { src: okaiPiscine, alt: "Lodge au bord d'une piscine au coucher du soleil dans le désert de Lompoul" },
+      { src: okaiCamels, alt: "Dromadaires devant le lodge illuminé à la tombée de la nuit à Lompoul" },
+    ],
   },
+
   {
     slug: "saint-louis",
     name: "Saint-Louis",
