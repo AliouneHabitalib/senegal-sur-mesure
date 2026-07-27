@@ -4,6 +4,19 @@ import lacRose from "@/assets/lac-rose.avif";
 import sineSaloum from "@/assets/sine-saloum.avif";
 import lompoul from "@/assets/desert-lompoul.avif";
 import saintLouis from "@/assets/saint-louis.avif";
+import lacRoseBoats from "@/assets/photo-lac-rose-boats.avif";
+import lacRoseFlag from "@/assets/photo-lac-rose-flag.avif";
+import lompoulDiambar from "@/assets/diambar-desert.avif";
+import lompoulRepas from "@/assets/lompoul-repas.avif";
+import lompoulTentes from "@/assets/lompoul-tentes.avif";
+import lompoulJump from "@/assets/lompoul-jump.avif";
+import okaiPiscine from "@/assets/okai-piscine.avif";
+import okaiCamels from "@/assets/okai-camels.avif";
+
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
 
 export interface Destination {
   slug: string;
@@ -15,7 +28,9 @@ export interface Destination {
   metaTitle: string;
   metaDescription: string;
   highlights: { title: string; text: string }[];
+  gallery?: GalleryImage[];
 }
+
 
 export const destinations: Destination[] = [
   {
