@@ -126,7 +126,7 @@ function DestinationPage() {
               <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">{d.name} en images</h2>
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {d.gallery.map((g, i) => (
+              {d.gallery.map((g: { src: string; alt: string }, i: number) => (
                 <div key={i} className="overflow-hidden rounded-2xl shadow-soft">
                   <img
                     src={g.src}
