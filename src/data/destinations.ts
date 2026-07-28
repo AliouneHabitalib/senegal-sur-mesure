@@ -13,6 +13,14 @@ import lompoulJump from "@/assets/lompoul-jump.avif";
 import okaiPiscine from "@/assets/okai-piscine.avif";
 import okaiCamels from "@/assets/okai-camels.avif";
 import diambarSineSaloum from "@/assets/diambar-sine-saloum.avif";
+import lompoulClient from "@/assets/lompoul-diambar-client.avif";
+import lompoulCoucherSoleil from "@/assets/lompoul-coucher-soleil.avif";
+import lompoulChaises from "@/assets/lompoul-chaises.avif";
+import lompoulTenteUnique from "@/assets/lompoul-tente-unique.avif";
+import saloumDiambarClient from "@/assets/saloum-diambar-client.avif";
+import saloumBaobabPirogue from "@/assets/saloum-baobab-pirogue.avif";
+import saloumBaobab from "@/assets/saloum-baobab.avif";
+import saloumOiseaux from "@/assets/saloum-oiseaux.avif";
 
 export interface GalleryImage {
   src: string;
