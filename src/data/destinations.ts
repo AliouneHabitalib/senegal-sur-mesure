@@ -13,6 +13,14 @@ import lompoulJump from "@/assets/lompoul-jump.avif";
 import okaiPiscine from "@/assets/okai-piscine.avif";
 import okaiCamels from "@/assets/okai-camels.avif";
 import diambarSineSaloum from "@/assets/diambar-sine-saloum.avif";
+import lompoulClient from "@/assets/lompoul-diambar-client.avif";
+import lompoulCoucherSoleil from "@/assets/lompoul-coucher-soleil.avif";
+import lompoulChaises from "@/assets/lompoul-chaises.avif";
+import lompoulTenteUnique from "@/assets/lompoul-tente-unique.avif";
+import saloumDiambarClient from "@/assets/saloum-diambar-client.avif";
+import saloumBaobabPirogue from "@/assets/saloum-baobab-pirogue.avif";
+import saloumBaobab from "@/assets/saloum-baobab.avif";
+import saloumOiseaux from "@/assets/saloum-oiseaux.avif";
 
 export interface GalleryImage {
   src: string;
@@ -117,6 +125,10 @@ export const destinations: Destination[] = [
     ],
     gallery: [
       { src: diambarSineSaloum, alt: "Diambar, guide indépendant, aux côtés d'une pirogue traditionnelle dans les mangroves du Sine Saloum" },
+      { src: saloumDiambarClient, alt: "Mangroves et baobab du Sine Saloum, Sénégal — Diambar en pirogue avec un voyageur" },
+      { src: saloumBaobab, alt: "Mangroves et baobab du Sine Saloum, Sénégal" },
+      { src: saloumBaobabPirogue, alt: "Mangroves et baobab du Sine Saloum vus depuis une pirogue" },
+      { src: saloumOiseaux, alt: "Oiseaux sur un banc de sable dans le delta du Sine Saloum, Sénégal" },
     ],
   },
   {
@@ -144,6 +156,10 @@ export const destinations: Destination[] = [
       { src: lompoulRepas, alt: "Moment convivial autour d'un repas au campement de Lompoul" },
       { src: okaiPiscine, alt: "Lodge au bord d'une piscine au coucher du soleil dans le désert de Lompoul" },
       { src: okaiCamels, alt: "Dromadaires devant le lodge illuminé à la tombée de la nuit à Lompoul" },
+      { src: lompoulClient, alt: "Désert de Lompoul, dunes et campement, Sénégal — Diambar et un voyageur sur les dunes" },
+      { src: lompoulCoucherSoleil, alt: "Désert de Lompoul, coucher de soleil sur les dunes, Sénégal" },
+      { src: lompoulChaises, alt: "Désert de Lompoul, chaises en bois sur le sable devant les tentes du campement" },
+      { src: lompoulTenteUnique, alt: "Désert de Lompoul, tente mauritanienne au cœur des dunes, Sénégal" },
     ],
   },
 
