@@ -21,6 +21,7 @@ import saloumDiambarClient from "@/assets/saloum-diambar-client.avif";
 import saloumBaobabPirogue from "@/assets/saloum-baobab-pirogue.avif";
 import saloumBaobab from "@/assets/saloum-baobab.avif";
 import saloumOiseaux from "@/assets/saloum-oiseaux.avif";
+import saloumPontMangrove from "@/assets/saloum-pont-mangrove.avif";
 
 export interface GalleryImage {
   src: string;
