@@ -294,19 +294,24 @@ function Index() {
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
             {[
+              { src: safariDiambarLions, alt: "Safari lions réserve de Bandia, Sénégal — Diambar guide indépendant" },
+              { src: safariLions, alt: "Safari lions réserve de Bandia, Sénégal" },
               { src: safari, alt: "Safari au Sénégal, faune de la réserve de Bandia" },
               { src: culture, alt: "Scène culturelle traditionnelle sénégalaise" },
               { src: lacRose, alt: "Lac Rose (Retba) aux eaux rosées près de Dakar" },
               { src: lompoul, alt: "Dunes orangées du désert de Lompoul au Sénégal" },
+              { src: lompoulCoucherSoleil, alt: "Coucher de soleil sur les dunes du désert de Lompoul, Sénégal" },
               { src: hospitalite, alt: "Hospitalité sénégalaise : Diambar et une jeune voyageuse tout sourire" },
               { src: avecLaTortue, alt: "Diambar, guide indépendant, portant une tortue au cœur d'une réserve naturelle" },
               { src: sineSaloum, alt: "Mangroves du Sine Saloum en pirogue" },
+              { src: saloumBaobab, alt: "Baobab au bord de l'eau dans le delta du Sine Saloum, Sénégal" },
+              { src: saloumOiseaux, alt: "Oiseaux sur un banc de sable dans le Sine Saloum, Sénégal" },
               { src: goree, alt: "Île de Gorée, patrimoine UNESCO au large de Dakar" },
               { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais au bord du Lac Rose" },
               { src: saintLouis, alt: "Architecture coloniale de Saint-Louis du Sénégal" },
               { src: dakar, alt: "Vue urbaine de Dakar, capitale du Sénégal" },
             ].map((img, i) => (
-              <div key={i} className={`overflow-hidden rounded-xl ${i === 0 || i === 5 ? "row-span-2" : ""}`}>
+              <div key={i} className={`overflow-hidden rounded-xl ${i === 0 || i === 7 ? "row-span-2" : ""}`}>
                 <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-smooth hover:scale-110" />
               </div>
             ))}
