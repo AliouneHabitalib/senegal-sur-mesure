@@ -156,6 +156,10 @@ export const destinations: Destination[] = [
       { src: lompoulRepas, alt: "Moment convivial autour d'un repas au campement de Lompoul" },
       { src: okaiPiscine, alt: "Lodge au bord d'une piscine au coucher du soleil dans le désert de Lompoul" },
       { src: okaiCamels, alt: "Dromadaires devant le lodge illuminé à la tombée de la nuit à Lompoul" },
+      { src: lompoulClient, alt: "Désert de Lompoul, dunes et campement, Sénégal — Diambar et un voyageur sur les dunes" },
+      { src: lompoulCoucherSoleil, alt: "Désert de Lompoul, coucher de soleil sur les dunes, Sénégal" },
+      { src: lompoulChaises, alt: "Désert de Lompoul, chaises en bois sur le sable devant les tentes du campement" },
+      { src: lompoulTenteUnique, alt: "Désert de Lompoul, tente mauritanienne au cœur des dunes, Sénégal" },
     ],
   },
 
