@@ -129,6 +129,7 @@ export const destinations: Destination[] = [
       { src: saloumDiambarClient, alt: "Mangroves et baobab du Sine Saloum, Sénégal — Diambar en pirogue avec un voyageur" },
       { src: saloumBaobab, alt: "Mangroves et baobab du Sine Saloum, Sénégal" },
       { src: saloumBaobabPirogue, alt: "Mangroves et baobab du Sine Saloum vus depuis une pirogue" },
+      { src: saloumPontMangrove, alt: "Passerelle en bois traversant les mangroves du Sine Saloum, Sénégal" },
       { src: saloumOiseaux, alt: "Oiseaux sur un banc de sable dans le delta du Sine Saloum, Sénégal" },
     ],
   },
