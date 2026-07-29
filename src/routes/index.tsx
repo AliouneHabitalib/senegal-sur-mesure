@@ -126,7 +126,12 @@ const circuits = [
   { name: "Désert & Saint-Louis", days: "7 jours", desc: "Lompoul, Saint-Louis, Langue de Barbarie", img: lompoul },
 ];
 
+const galleryImages = [
+  { src: "__PLACEHOLDER__", alt: "" },
+];
+
 function Index() {
+  const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (
     <Layout>
       {/* HERO */}
