@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
+import { Lightbox } from "@/components/Lightbox";
 import heroImg from "@/assets/hero-senegal.avif";
 import guideImg from "@/assets/guide-diambar.avif";
 import dakar from "@/assets/dakar.avif";
