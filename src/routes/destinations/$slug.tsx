@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { MapPin, ArrowRight } from "lucide-react";
 import { destinations, getDestination } from "@/data/destinations";
+import { Lightbox } from "@/components/Lightbox";
 
 const BASE_URL = "https://www.senegal-sur-mesure.com";
 
@@ -59,6 +61,7 @@ export const Route = createFileRoute("/destinations/$slug")({
 function DestinationPage() {
   const { destination: d } = Route.useLoaderData();
   const others = destinations.filter((x) => x.slug !== d.slug);
+  const [lbIndex, setLbIndex] = useState<number | null>(null);
 
   return (
     <Layout>
@@ -127,18 +130,32 @@ function DestinationPage() {
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {d.gallery.map((g: { src: string; alt: string }, i: number) => (
-                <div key={i} className="overflow-hidden rounded-2xl shadow-soft">
+                <button
+                  type="button"
+                  key={i}
+                  onClick={() => setLbIndex(i)}
+                  className="group overflow-hidden rounded-2xl shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  aria-label={`Ouvrir l'image : ${g.alt}`}
+                >
                   <img
                     src={g.src}
                     alt={g.alt}
                     loading="lazy"
                     decoding="async"
-                    className="h-64 w-full object-cover transition-smooth hover:scale-105"
+                    className="h-64 w-full object-cover transition-smooth group-hover:scale-105"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>
+          {lbIndex !== null && (
+            <Lightbox
+              images={d.gallery}
+              index={lbIndex}
+              onClose={() => setLbIndex(null)}
+              onIndexChange={setLbIndex}
+            />
+          )}
         </section>
       )}
 

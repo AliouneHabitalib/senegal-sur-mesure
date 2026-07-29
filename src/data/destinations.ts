@@ -22,6 +22,15 @@ import saloumBaobabPirogue from "@/assets/saloum-baobab-pirogue.avif";
 import saloumBaobab from "@/assets/saloum-baobab.avif";
 import saloumOiseaux from "@/assets/saloum-oiseaux.avif";
 import saloumPontMangrove from "@/assets/saloum-pont-mangrove.avif";
+import dakarMonumentRenaissance from "@/assets/dakar-monument-renaissance.avif";
+import dakarMonumentJour from "@/assets/dakar-monument-jour.avif";
+import dakarMonumentNuit from "@/assets/dakar-monument-nuit.avif";
+import dakarPlaceSouvenir from "@/assets/dakar-place-souvenir.avif";
+import dakarMosqueeDivinite from "@/assets/dakar-mosquee-divinite.avif";
+import dakarPiroguesPlage from "@/assets/dakar-pirogues-plage.avif";
+import goreePortPirogues from "@/assets/goree-port-pirogues.avif";
+import goreeVueAerienne from "@/assets/goree-vue-aerienne.avif";
+import goreeMaisonEsclaves from "@/assets/goree-maison-esclaves.avif";
 
 export interface GalleryImage {
   src: string;
@@ -58,8 +67,17 @@ export const destinations: Destination[] = [
       { title: "Monument de la Renaissance Africaine", text: "La plus haute statue d'Afrique, avec une vue panoramique sur la ville et l'océan." },
       { title: "Marchés Sandaga et Kermel", text: "Artisanat, tissus, épices et ambiance populaire au cœur de la capitale." },
       { title: "La Corniche et le Phare des Mamelles", text: "Front de mer atlantique et point de vue emblématique au sommet des Mamelles." },
+      { title: "Mosquée de la Divinité", text: "Édifice singulier posé face à l'océan, dans l'anse des Almadies." },
       { title: "Village des Arts", text: "Galeries et ateliers d'artistes contemporains sénégalais." },
       { title: "Le Plateau colonial", text: "Architecture historique et Place de l'Indépendance, cœur administratif de Dakar." },
+    ],
+    gallery: [
+      { src: dakarMonumentRenaissance, alt: "Monument de la Renaissance Africaine, Dakar, Sénégal" },
+      { src: dakarMonumentJour, alt: "Monument de la Renaissance Africaine vu depuis les escaliers en journée, Dakar" },
+      { src: dakarMonumentNuit, alt: "Monument de la Renaissance Africaine illuminé de nuit, Dakar" },
+      { src: dakarPlaceSouvenir, alt: "Place du Souvenir Africain face à l'océan Atlantique, Dakar" },
+      { src: dakarMosqueeDivinite, alt: "Mosquée de la Divinité et plage des pêcheurs, Dakar" },
+      { src: dakarPiroguesPlage, alt: "Pirogues colorées alignées sur la plage des pêcheurs à Dakar" },
     ],
   },
   {
@@ -79,6 +97,11 @@ export const destinations: Destination[] = [
       { title: "Ruelles pavées et façades colorées", text: "Un ensemble architectural classé au patrimoine mondial de l'UNESCO." },
       { title: "Plage et baignade", text: "Une petite plage abritée idéale pour une pause entre deux visites." },
       { title: "Ambiance sans voitures", text: "L'île se parcourt entièrement à pied, dans un calme rare." },
+    ],
+    gallery: [
+      { src: goreeVueAerienne, alt: "Vue aérienne de l'île de Gorée et de ses toits ocre, patrimoine UNESCO du Sénégal" },
+      { src: goreePortPirogues, alt: "Pirogues colorées et façades ocre au port de l'île de Gorée, Sénégal" },
+      { src: goreeMaisonEsclaves, alt: "Escaliers emblématiques de la Maison des Esclaves à Gorée, Sénégal" },
     ],
   },
   {
