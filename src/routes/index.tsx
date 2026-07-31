@@ -153,15 +153,17 @@ type GallerySection =
   | { type: "band"; bg: number; title: string; subtitle: string };
 
 const gallerySections: GallerySection[] = [
+  { type: "row", items: [4, 5, 6, 16] },
+  { type: "band", bg: 5, title: "Explorez", subtitle: "les paysages sauvages" },
+  { type: "row", items: [12, 13, 14, 11] },
+  { type: "band", bg: 13, title: "Découvrez", subtitle: "le delta du Sine Saloum" },
   { type: "row", items: [0, 1, 2, 3] },
-  { type: "band", bg: 5, title: "Explorez", subtitle: "des paysages uniques" },
-  { type: "row", items: [4, 5, 6, 12] },
   { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
-  { type: "row", items: [13, 14, 15, 16] },
+  { type: "row", items: [7, 8, 9, 10] },
   { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
-  { type: "row", items: [7, 8, 9, 11] },
-  { type: "row", items: [10, 17, 18] },
+  { type: "row", items: [15, 17, 18] },
 ];
+
 
 function Index() {
   const [lbIndex, setLbIndex] = useState<number | null>(null);
@@ -340,7 +342,7 @@ function Index() {
         <div className="mt-12 space-y-0">
           {gallerySections.map((section, si) =>
             section.type === "row" ? (
-              <div key={si} className={`grid grid-cols-2 ${section.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
+              <div key={si} className={`grid grid-cols-2 gap-0 ${section.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
                 {section.items.map((i) => (
                   <button
                     type="button"
