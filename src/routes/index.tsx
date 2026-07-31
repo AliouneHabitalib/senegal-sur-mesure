@@ -148,6 +148,21 @@ const galleryImages = [
   { src: dakar, alt: "Vue urbaine de Dakar, capitale du Sénégal" },
 ];
 
+type GallerySection =
+  | { type: "row"; items: number[] }
+  | { type: "band"; bg: number; title: string; subtitle: string };
+
+const gallerySections: GallerySection[] = [
+  { type: "row", items: [0, 1, 2, 3] },
+  { type: "band", bg: 5, title: "Explorez", subtitle: "des paysages uniques" },
+  { type: "row", items: [4, 5, 6, 12] },
+  { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
+  { type: "row", items: [13, 14, 15, 16] },
+  { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
+  { type: "row", items: [7, 8, 9, 11] },
+  { type: "row", items: [10, 17, 18] },
+];
+
 function Index() {
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (
