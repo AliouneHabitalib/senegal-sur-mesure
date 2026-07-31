@@ -148,6 +148,21 @@ const galleryImages = [
   { src: dakar, alt: "Vue urbaine de Dakar, capitale du Sénégal" },
 ];
 
+type GallerySection =
+  | { type: "row"; items: number[] }
+  | { type: "band"; bg: number; title: string; subtitle: string };
+
+const gallerySections: GallerySection[] = [
+  { type: "row", items: [0, 1, 2, 3] },
+  { type: "band", bg: 5, title: "Explorez", subtitle: "des paysages uniques" },
+  { type: "row", items: [4, 5, 6, 12] },
+  { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
+  { type: "row", items: [13, 14, 15, 16] },
+  { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
+  { type: "row", items: [7, 8, 9, 11] },
+  { type: "row", items: [10, 17, 18] },
+];
+
 function Index() {
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (
@@ -320,30 +335,58 @@ function Index() {
             <span className="text-sm font-semibold uppercase tracking-wider text-accent">Galerie</span>
             <h2 className="mt-2 font-display text-4xl font-bold md:text-5xl">Le Sénégal en images</h2>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {galleryImages.map((img, i) => (
-              <button
-                type="button"
-                key={i}
-                onClick={() => setLbIndex(i)}
-                aria-label={`Ouvrir l'image : ${img.alt}`}
-                className={`group overflow-hidden rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${i === 0 || i === 7 ? "row-span-2" : ""}`}
-              >
-                <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-smooth group-hover:scale-110" />
-              </button>
-            ))}
-          </div>
-          {lbIndex !== null && (
-            <Lightbox
-              images={galleryImages}
-              index={lbIndex}
-              onClose={() => setLbIndex(null)}
-              onIndexChange={setLbIndex}
-            />
-          )}
-
         </div>
+
+        <div className="mt-12 space-y-0">
+          {gallerySections.map((section, si) =>
+            section.type === "row" ? (
+              <div key={si} className={`grid grid-cols-2 ${section.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
+                {section.items.map((i) => (
+                  <button
+                    type="button"
+                    key={i}
+                    onClick={() => setLbIndex(i)}
+                    aria-label={`Ouvrir l'image : ${galleryImages[i].alt}`}
+                    className="group relative block aspect-[4/3] overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
+                  >
+                    <img
+                      src={galleryImages[i].src}
+                      alt={galleryImages[i].alt}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div key={si} className="relative isolate flex h-40 items-center justify-center overflow-hidden md:h-56">
+                <img
+                  src={galleryImages[section.bg].src}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-foreground/60" />
+                <div className="relative px-4 text-center text-white">
+                  <p className="font-display text-3xl font-bold uppercase tracking-widest md:text-4xl">{section.title}</p>
+                  <p className="mt-2 text-base font-light tracking-wide text-white/90 md:text-lg">{section.subtitle}</p>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+
+        {lbIndex !== null && (
+          <Lightbox
+            images={galleryImages}
+            index={lbIndex}
+            onClose={() => setLbIndex(null)}
+            onIndexChange={setLbIndex}
+          />
+        )}
       </section>
+
 
       {/* TESTIMONIALS */}
       <section className="bg-ocean-deep py-20 text-white md:py-28">
