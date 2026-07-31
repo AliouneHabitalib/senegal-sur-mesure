@@ -342,7 +342,7 @@ function Index() {
         <div className="mt-12 space-y-0">
           {gallerySections.map((section, si) =>
             section.type === "row" ? (
-              <div key={si} className={`grid grid-cols-2 ${section.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
+              <div key={si} className={`grid grid-cols-2 gap-0 ${section.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
                 {section.items.map((i) => (
                   <button
                     type="button"
