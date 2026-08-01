@@ -37,6 +37,13 @@ export interface GalleryImage {
   alt: string;
 }
 
+export interface DestinationMemory {
+  title: string;
+  intro: string;
+  closing: string;
+  gallery?: GalleryImage[];
+}
+
 export interface Destination {
   slug: string;
   name: string;
@@ -48,6 +55,7 @@ export interface Destination {
   metaDescription: string;
   highlights: { title: string; text: string }[];
   gallery?: GalleryImage[];
+  memory?: DestinationMemory;
 }
 
 
@@ -103,6 +111,18 @@ export const destinations: Destination[] = [
       { src: goreePortPirogues, alt: "Pirogues colorées et façades ocre au port de l'île de Gorée, Sénégal" },
       { src: goreeMaisonEsclaves, alt: "Escaliers emblématiques de la Maison des Esclaves à Gorée, Sénégal" },
     ],
+    memory: {
+      title: "Mémoire & patrimoine",
+      intro:
+        "L'île de Gorée est inscrite au patrimoine mondial de l'UNESCO en tant que lieu de mémoire de la traite atlantique. Au cœur de cette petite île sans voitures, la Maison des Esclaves et sa célèbre Porte du Voyage sans Retour rappellent les millions d'Africains déportés vers les Amériques entre le XVe et le XIXe siècle. La visite est un moment de recueillement, essentiel pour comprendre une partie douloureuse mais fondamentale de l'histoire commune de l'Afrique, de l'Europe et des Amériques.",
+      closing:
+        "Au-delà de son architecture coloniale et de ses ruelles pavées, Gorée demeure un symbole puissant dans la mémoire collective africaine et de la diaspora. C'est un lieu de mémoire où chaque pas invite à la réflexion, au respect des victimes et à la transmission de cette histoire aux générations futures.",
+      gallery: [
+        { src: goreeMaisonEsclaves, alt: "Escaliers de la Maison des Esclaves à Gorée, lieu de mémoire de la traite atlantique" },
+        { src: goreeVueAerienne, alt: "Vue d'ensemble de l'île de Gorée, classée au patrimoine mondial de l'UNESCO" },
+        { src: goreePortPirogues, alt: "Port de Gorée, point de départ historique vers les Amériques" },
+      ],
+    },
   },
   {
     slug: "lac-rose",
