@@ -62,6 +62,7 @@ function DestinationPage() {
   const { destination: d } = Route.useLoaderData();
   const others = destinations.filter((x) => x.slug !== d.slug);
   const [lbIndex, setLbIndex] = useState<number | null>(null);
+  const [memoryLbIndex, setMemoryLbIndex] = useState<number | null>(null);
 
   return (
     <Layout>
