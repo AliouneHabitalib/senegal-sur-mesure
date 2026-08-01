@@ -160,6 +160,51 @@ function DestinationPage() {
         </section>
       )}
 
+      {/* MÉMOIRE & PATRIMOINE */}
+      {d.memory && (
+        <section className="bg-gradient-sand py-16 md:py-24">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-wider text-accent">Histoire</span>
+              <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">{d.memory.title}</h2>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{d.memory.intro}</p>
+            </div>
+            {d.memory.gallery && d.memory.gallery.length > 0 && (
+              <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {d.memory.gallery.map((g: { src: string; alt: string }, i: number) => (
+                  <button
+                    type="button"
+                    key={i}
+                    onClick={() => setMemoryLbIndex(i)}
+                    className="group overflow-hidden rounded-2xl shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    aria-label={`Ouvrir l'image : ${g.alt}`}
+                  >
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-64 w-full object-cover transition-smooth group-hover:scale-105"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="mx-auto mt-12 max-w-3xl text-center">
+              <p className="text-base leading-relaxed text-muted-foreground">{d.memory.closing}</p>
+            </div>
+          </div>
+          {memoryLbIndex !== null && d.memory.gallery && (
+            <Lightbox
+              images={d.memory.gallery}
+              index={memoryLbIndex}
+              onClose={() => setMemoryLbIndex(null)}
+              onIndexChange={setMemoryLbIndex}
+            />
+          )}
+        </section>
+      )}
+
       {/* AUTRES DESTINATIONS */}
 
       <section className="py-16 md:py-20">
