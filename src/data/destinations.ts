@@ -154,6 +154,8 @@ export const destinations: Destination[] = [
     gallery: [
       { src: lacRoseBoats, alt: "Pirogues colorées aux couleurs du Sénégal amarrées sur les rives du Lac Rose" },
       { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
+      { src: lacRoseFamillePirogues, alt: "Voyageurs posant devant les pirogues aux couleurs du Sénégal sur les rives du Lac Rose" },
+      { src: lacRoseProguePassagers, alt: "Voyageurs assis dans une pirogue traditionnelle sur le Lac Rose, Sénégal" },
     ],
   },
 
