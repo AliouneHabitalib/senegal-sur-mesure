@@ -31,6 +31,15 @@ import dakarPiroguesPlage from "@/assets/dakar-pirogues-plage.avif";
 import goreePortPirogues from "@/assets/goree-port-pirogues.avif";
 import goreeVueAerienne from "@/assets/goree-vue-aerienne.avif";
 import goreeMaisonEsclaves from "@/assets/goree-maison-esclaves.avif";
+import goreeExpositionTraite from "@/assets/goree-exposition-traite.avif";
+import goreeExpositionGuide from "@/assets/goree-exposition-guide.avif";
+import dakarMonumentEscaliersVoyageurs from "@/assets/dakar-monument-escaliers-voyageurs.avif";
+import dakarMonumentEsplanade from "@/assets/dakar-monument-esplanade.avif";
+import lacRoseFamillePirogues from "@/assets/lac-rose-famille-pirogues.avif";
+import lacRoseProguePassagers from "@/assets/lac-rose-pirogue-passagers.avif";
+import lompoulCampementTransats from "@/assets/lompoul-campement-transats.avif";
+import lompoulCampementJoie from "@/assets/lompoul-campement-joie.avif";
+import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
 
 export interface GalleryImage {
   src: string;
