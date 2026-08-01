@@ -37,6 +37,13 @@ export interface GalleryImage {
   alt: string;
 }
 
+export interface DestinationMemory {
+  title: string;
+  intro: string;
+  closing: string;
+  gallery?: GalleryImage[];
+}
+
 export interface Destination {
   slug: string;
   name: string;
@@ -48,6 +55,7 @@ export interface Destination {
   metaDescription: string;
   highlights: { title: string; text: string }[];
   gallery?: GalleryImage[];
+  memory?: DestinationMemory;
 }
 
 
