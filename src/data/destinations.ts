@@ -183,6 +183,7 @@ export const destinations: Destination[] = [
       { src: saloumBaobabPirogue, alt: "Mangroves et baobab du Sine Saloum vus depuis une pirogue" },
       { src: saloumPontMangrove, alt: "Passerelle en bois traversant les mangroves du Sine Saloum, Sénégal" },
       { src: saloumOiseaux, alt: "Oiseaux sur un banc de sable dans le delta du Sine Saloum, Sénégal" },
+      { src: saloumPirogueJeunes, alt: "Jeunes voyageurs en pirogue sous un taud coloré dans les mangroves du Sine Saloum" },
     ],
   },
   {
