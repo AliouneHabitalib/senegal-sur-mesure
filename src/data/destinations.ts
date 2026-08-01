@@ -157,6 +157,30 @@ export const destinations: Destination[] = [
     ],
   },
   {
+    slug: "fadiouth",
+    name: "Fadiouth, l'île aux coquillages",
+    img: saloumBaobab,
+    alt: "Île de Fadiouth, île aux coquillages du Sénégal (photo provisoire)",
+    desc: "Une île entièrement construite de coquillages accumulés depuis des siècles, village lébou traditionnel et cimetière mixte chrétien-musulman unique en Afrique.",
+    longDesc:
+      "Reliée au continent par un long pont de bois, l'île de Fadiouth repose sur un socle de coquillages accumulés siècle après siècle : le sol, les ruelles et jusqu'aux murs en portent la trace. On y découvre un village lébou traditionnel, sans voitures, où la vie s'organise autour de la pêche, du séchage des coquillages et des greniers à mil posés sur pilotis. Un second pont mène au cimetière mixte, où tombes chrétiennes et musulmanes se côtoient sur la même colline de coquillages — un cas unique en Afrique et le symbole vivant de la cohabitation religieuse sénégalaise.",
+    metaTitle: "Fadiouth, l'île aux coquillages — Visite guidée | Diambar",
+    metaDescription:
+      "Visitez l'île de Fadiouth avec un guide local : île de coquillages, village lébou traditionnel, greniers à mil sur pilotis et cimetière mixte chrétien-musulman.",
+    highlights: [
+      { title: "Une île de coquillages", text: "Un sol formé de coquillages accumulés depuis des siècles par les habitants." },
+      { title: "Village lébou traditionnel", text: "Ruelles sans voitures, pêche et vie quotidienne au rythme de la lagune." },
+      { title: "Cimetière mixte chrétien-musulman", text: "Un lieu unique en Afrique, symbole de la cohabitation religieuse au Sénégal." },
+      { title: "Le pont de bois", text: "Une longue passerelle qui relie Joal à l'île, puis l'île au cimetière." },
+      { title: "Greniers à mil sur pilotis", text: "Silos traditionnels posés sur l'eau, à l'écart du village." },
+    ],
+    gallery: [
+      { src: saloumBaobab, alt: "Photo provisoire — paysage du delta près de Fadiouth, Sénégal" },
+      { src: saloumPontMangrove, alt: "Photo provisoire — passerelle en bois évoquant le pont de Fadiouth, Sénégal" },
+      { src: saloumBaobabPirogue, alt: "Photo provisoire — pirogue dans le delta près de Fadiouth, Sénégal" },
+    ],
+  },
+  {
     slug: "lompoul",
     name: "Lompoul",
     img: lompoul,
