@@ -95,6 +95,8 @@ export const destinations: Destination[] = [
       { src: dakarPlaceSouvenir, alt: "Place du Souvenir Africain face à l'océan Atlantique, Dakar" },
       { src: dakarMosqueeDivinite, alt: "Mosquée de la Divinité et plage des pêcheurs, Dakar" },
       { src: dakarPiroguesPlage, alt: "Pirogues colorées alignées sur la plage des pêcheurs à Dakar" },
+      { src: dakarMonumentEscaliersVoyageurs, alt: "Voyageurs devant les escaliers du Monument de la Renaissance Africaine à Dakar" },
+      { src: dakarMonumentEsplanade, alt: "Esplanade et grand escalier du Monument de la Renaissance Africaine, Dakar" },
     ],
   },
   {
