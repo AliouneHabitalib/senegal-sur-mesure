@@ -127,9 +127,9 @@ export const destinations: Destination[] = [
       closing:
         "Au-delà de son architecture coloniale et de ses ruelles pavées, Gorée demeure un symbole puissant dans la mémoire collective africaine et de la diaspora. C'est un lieu de mémoire où chaque pas invite à la réflexion, au respect des victimes et à la transmission de cette histoire aux générations futures.",
       gallery: [
+        { src: goreeExpositionTraite, alt: "Exposition historique sur la traite atlantique : panneaux retraçant la capture et la traversée" },
+        { src: goreeExpositionGuide, alt: "Diambar, guide indépendant, expliquant l'histoire de la traite atlantique à de jeunes visiteurs" },
         { src: goreeMaisonEsclaves, alt: "Escaliers de la Maison des Esclaves à Gorée, lieu de mémoire de la traite atlantique" },
-        { src: goreeVueAerienne, alt: "Vue d'ensemble de l'île de Gorée, classée au patrimoine mondial de l'UNESCO" },
-        { src: goreePortPirogues, alt: "Port de Gorée, point de départ historique vers les Amériques" },
       ],
     },
   },
