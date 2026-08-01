@@ -23,6 +23,9 @@ import lompoulCoucherSoleil from "@/assets/lompoul-coucher-soleil.avif";
 import diambarClientStromae from "@/assets/diambar-client-stromae.avif";
 import diambarNickSelfie from "@/assets/diambar-nick-selfie.avif";
 import saloumDinerPlage from "@/assets/saloum-diner-plage.avif";
+import rencontreVillage from "@/assets/rencontre-village-baobab.avif";
+import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
+import lacRoseFamille from "@/assets/lac-rose-famille-pirogues.avif";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { destinations as allDestinations } from "@/data/destinations";
@@ -146,6 +149,9 @@ const galleryImages = [
   { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais au bord du Lac Rose" },
   { src: saintLouis, alt: "Architecture coloniale de Saint-Louis du Sénégal" },
   { src: dakar, alt: "Vue urbaine de Dakar, capitale du Sénégal" },
+  { src: rencontreVillage, alt: "Rencontre avec les habitants d'un village sénégalais sous le grand arbre" },
+  { src: saloumPirogueJeunes, alt: "Jeunes voyageurs en pirogue dans les mangroves du Sine Saloum" },
+  { src: lacRoseFamille, alt: "Famille de voyageurs devant les pirogues aux couleurs du Sénégal au Lac Rose" },
 ];
 
 type GallerySection =
@@ -153,14 +159,15 @@ type GallerySection =
   | { type: "band"; bg: number; title: string; subtitle: string };
 
 const gallerySections: GallerySection[] = [
-  { type: "row", items: [4, 5, 6, 16] },
+  { type: "row", items: [4, 16, 21, 5] },
   { type: "band", bg: 5, title: "Explorez", subtitle: "les paysages sauvages" },
-  { type: "row", items: [12, 13, 14, 11] },
+  { type: "row", items: [6, 12, 13, 20] },
   { type: "band", bg: 13, title: "Découvrez", subtitle: "le delta du Sine Saloum" },
-  { type: "row", items: [0, 1, 2, 3] },
+  { type: "row", items: [14, 11, 0, 1] },
   { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
-  { type: "row", items: [7, 8, 9, 10] },
+  { type: "row", items: [2, 3, 7, 8] },
   { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
+  { type: "row", items: [9, 10, 19] },
   { type: "row", items: [15, 17, 18] },
 ];
 

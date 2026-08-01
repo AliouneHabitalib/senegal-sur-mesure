@@ -31,6 +31,15 @@ import dakarPiroguesPlage from "@/assets/dakar-pirogues-plage.avif";
 import goreePortPirogues from "@/assets/goree-port-pirogues.avif";
 import goreeVueAerienne from "@/assets/goree-vue-aerienne.avif";
 import goreeMaisonEsclaves from "@/assets/goree-maison-esclaves.avif";
+import goreeExpositionTraite from "@/assets/goree-exposition-traite.avif";
+import goreeExpositionGuide from "@/assets/goree-exposition-guide.avif";
+import dakarMonumentEscaliersVoyageurs from "@/assets/dakar-monument-escaliers-voyageurs.avif";
+import dakarMonumentEsplanade from "@/assets/dakar-monument-esplanade.avif";
+import lacRoseFamillePirogues from "@/assets/lac-rose-famille-pirogues.avif";
+import lacRoseProguePassagers from "@/assets/lac-rose-pirogue-passagers.avif";
+import lompoulCampementTransats from "@/assets/lompoul-campement-transats.avif";
+import lompoulCampementJoie from "@/assets/lompoul-campement-joie.avif";
+import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
 
 export interface GalleryImage {
   src: string;
@@ -86,6 +95,8 @@ export const destinations: Destination[] = [
       { src: dakarPlaceSouvenir, alt: "Place du Souvenir Africain face à l'océan Atlantique, Dakar" },
       { src: dakarMosqueeDivinite, alt: "Mosquée de la Divinité et plage des pêcheurs, Dakar" },
       { src: dakarPiroguesPlage, alt: "Pirogues colorées alignées sur la plage des pêcheurs à Dakar" },
+      { src: dakarMonumentEscaliersVoyageurs, alt: "Voyageurs devant les escaliers du Monument de la Renaissance Africaine à Dakar" },
+      { src: dakarMonumentEsplanade, alt: "Esplanade et grand escalier du Monument de la Renaissance Africaine, Dakar" },
     ],
   },
   {
@@ -118,9 +129,9 @@ export const destinations: Destination[] = [
       closing:
         "Au-delà de son architecture coloniale et de ses ruelles pavées, Gorée demeure un symbole puissant dans la mémoire collective africaine et de la diaspora. C'est un lieu de mémoire où chaque pas invite à la réflexion, au respect des victimes et à la transmission de cette histoire aux générations futures.",
       gallery: [
+        { src: goreeExpositionTraite, alt: "Exposition historique sur la traite atlantique : panneaux retraçant la capture et la traversée" },
+        { src: goreeExpositionGuide, alt: "Diambar, guide indépendant, expliquant l'histoire de la traite atlantique à de jeunes visiteurs" },
         { src: goreeMaisonEsclaves, alt: "Escaliers de la Maison des Esclaves à Gorée, lieu de mémoire de la traite atlantique" },
-        { src: goreeVueAerienne, alt: "Vue d'ensemble de l'île de Gorée, classée au patrimoine mondial de l'UNESCO" },
-        { src: goreePortPirogues, alt: "Port de Gorée, point de départ historique vers les Amériques" },
       ],
     },
   },
@@ -145,6 +156,8 @@ export const destinations: Destination[] = [
     gallery: [
       { src: lacRoseBoats, alt: "Pirogues colorées aux couleurs du Sénégal amarrées sur les rives du Lac Rose" },
       { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
+      { src: lacRoseFamillePirogues, alt: "Voyageurs posant devant les pirogues aux couleurs du Sénégal sur les rives du Lac Rose" },
+      { src: lacRoseProguePassagers, alt: "Voyageurs assis dans une pirogue traditionnelle sur le Lac Rose, Sénégal" },
     ],
   },
 
@@ -174,6 +187,7 @@ export const destinations: Destination[] = [
       { src: saloumBaobabPirogue, alt: "Mangroves et baobab du Sine Saloum vus depuis une pirogue" },
       { src: saloumPontMangrove, alt: "Passerelle en bois traversant les mangroves du Sine Saloum, Sénégal" },
       { src: saloumOiseaux, alt: "Oiseaux sur un banc de sable dans le delta du Sine Saloum, Sénégal" },
+      { src: saloumPirogueJeunes, alt: "Jeunes voyageurs en pirogue sous un taud coloré dans les mangroves du Sine Saloum" },
     ],
   },
   {
@@ -229,6 +243,8 @@ export const destinations: Destination[] = [
       { src: lompoulCoucherSoleil, alt: "Désert de Lompoul, coucher de soleil sur les dunes, Sénégal" },
       { src: lompoulChaises, alt: "Désert de Lompoul, chaises en bois sur le sable devant les tentes du campement" },
       { src: lompoulTenteUnique, alt: "Désert de Lompoul, tente mauritanienne au cœur des dunes, Sénégal" },
+      { src: lompoulCampementTransats, alt: "Transats en bois sur le sable du campement de Lompoul, Sénégal" },
+      { src: lompoulCampementJoie, alt: "Voyageurs joyeux au campement du désert de Lompoul, Sénégal" },
     ],
   },
 
