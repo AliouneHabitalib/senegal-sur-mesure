@@ -24,6 +24,8 @@ import diambarClientStromae from "@/assets/diambar-client-stromae.avif";
 import diambarNickSelfie from "@/assets/diambar-nick-selfie.avif";
 import saloumDinerPlage from "@/assets/saloum-diner-plage.avif";
 import rencontreVillage from "@/assets/rencontre-village-baobab.avif";
+import villageArbreHabitants from "@/assets/village-arbre-habitants.avif";
+import dakarRueGroupe from "@/assets/dakar-rue-groupe-maillots.avif";
 import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
 import lacRoseFamille from "@/assets/lac-rose-famille-pirogues.avif";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
