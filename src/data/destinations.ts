@@ -254,6 +254,8 @@ export const destinations: Destination[] = [
       { src: lompoulTenteUnique, alt: "Désert de Lompoul, tente mauritanienne au cœur des dunes, Sénégal" },
       { src: lompoulCampementTransats, alt: "Transats en bois sur le sable du campement de Lompoul, Sénégal" },
       { src: lompoulCampementJoie, alt: "Voyageurs joyeux au campement du désert de Lompoul, Sénégal" },
+      { src: lompoulDromadaireAcacia, alt: "Diambar et de jeunes voyageurs devant un dromadaire et un acacia dans les dunes de Lompoul" },
+      { src: lompoulDromadaireAcacia2, alt: "Jeunes voyageurs en maillot du Sénégal posant près d'un dromadaire dans le désert de Lompoul" },
     ],
   },
 
