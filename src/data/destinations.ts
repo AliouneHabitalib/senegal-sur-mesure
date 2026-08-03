@@ -218,9 +218,9 @@ export const destinations: Destination[] = [
       { title: "Greniers à mil sur pilotis", text: "Silos traditionnels posés sur l'eau, à l'écart du village." },
     ],
     gallery: [
-      { src: saloumBaobab, alt: "Photo provisoire — paysage du delta près de Fadiouth, Sénégal" },
-      { src: saloumPontMangrove, alt: "Photo provisoire — passerelle en bois évoquant le pont de Fadiouth, Sénégal" },
-      { src: saloumBaobabPirogue, alt: "Photo provisoire — pirogue dans le delta près de Fadiouth, Sénégal" },
+      { src: fadiouthPanneau, alt: "Voyageurs devant la fresque « Fadiouth, l'île aux coquillages » au Sénégal" },
+      { src: saloumPontMangrove, alt: "Passerelle en bois évoquant le pont de Fadiouth, Sénégal" },
+      { src: saloumBaobabPirogue, alt: "Pirogue dans le delta près de Fadiouth, Sénégal" },
     ],
   },
   {
