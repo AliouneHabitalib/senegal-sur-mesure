@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Lightbox } from "@/components/Lightbox";
-import heroImg from "@/assets/hero-senegal.avif";
+import heroImg from "@/assets/photo-lac-rose-flag.avif";
 import guideImg from "@/assets/guide-diambar.avif";
 import dakar from "@/assets/dakar.avif";
 import goree from "@/assets/goree.avif";
@@ -184,10 +184,10 @@ function Index() {
       <section className="relative isolate flex min-h-[88vh] items-center overflow-hidden">
         <img
           src={heroImg}
-          alt="Plage du Sénégal au coucher du soleil avec pirogue traditionnelle"
+          alt="Pirogue traditionnelle au Lac Rose avec le drapeau du Sénégal"
           className="absolute inset-0 h-full w-full object-cover"
-          width={1920}
-          height={1080}
+          width={1600}
+          height={1066}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container relative mx-auto px-4 py-24 md:px-6">
