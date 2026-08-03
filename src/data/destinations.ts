@@ -40,6 +40,12 @@ import lacRoseProguePassagers from "@/assets/lac-rose-pirogue-passagers.avif";
 import lompoulCampementTransats from "@/assets/lompoul-campement-transats.avif";
 import lompoulCampementJoie from "@/assets/lompoul-campement-joie.avif";
 import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
+import fadiouthPanneau from "@/assets/fadiouth-panneau-ile-coquillages.avif";
+import lacRosePirogueDrapeauGroupe from "@/assets/lac-rose-pirogue-drapeau-groupe.avif";
+import goreeExpositionExplication from "@/assets/goree-exposition-explication.avif";
+import lompoulDromadaireAcacia from "@/assets/lompoul-dromadaire-acacia.avif";
+import lompoulDromadaireAcacia2 from "@/assets/lompoul-dromadaire-acacia-2.avif";
+import dakarRueGroupe from "@/assets/dakar-rue-groupe-maillots.avif";
 
 export interface GalleryImage {
   src: string;
