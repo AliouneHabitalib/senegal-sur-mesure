@@ -152,6 +152,8 @@ const galleryImages = [
   { src: rencontreVillage, alt: "Rencontre avec les habitants d'un village sénégalais sous le grand arbre" },
   { src: saloumPirogueJeunes, alt: "Jeunes voyageurs en pirogue dans les mangroves du Sine Saloum" },
   { src: lacRoseFamille, alt: "Famille de voyageurs devant les pirogues aux couleurs du Sénégal au Lac Rose" },
+  { src: villageArbreHabitants, alt: "Rencontre avec les habitants d'un village sénégalais sous un grand arbre" },
+  { src: dakarRueGroupe, alt: "Diambar et de jeunes voyageurs en maillot du Sénégal dans une rue de Dakar" },
 ];
 
 type GallerySection =
