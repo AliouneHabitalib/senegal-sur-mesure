@@ -138,6 +138,7 @@ export const destinations: Destination[] = [
       gallery: [
         { src: goreeExpositionTraite, alt: "Exposition historique sur la traite atlantique : panneaux retraçant la capture et la traversée" },
         { src: goreeExpositionGuide, alt: "Diambar, guide indépendant, expliquant l'histoire de la traite atlantique à de jeunes visiteurs" },
+        { src: goreeExpositionExplication, alt: "Guide expliquant les panneaux de l'exposition sur la traite atlantique à de jeunes visiteurs" },
         { src: goreeMaisonEsclaves, alt: "Escaliers de la Maison des Esclaves à Gorée, lieu de mémoire de la traite atlantique" },
       ],
     },
