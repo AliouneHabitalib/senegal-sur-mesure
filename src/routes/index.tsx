@@ -171,8 +171,8 @@ const gallerySections: GallerySection[] = [
   { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
   { type: "row", items: [2, 3, 7, 8] },
   { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
-  { type: "row", items: [9, 10, 19] },
-  { type: "row", items: [15, 17, 18] },
+  { type: "row", items: [9, 10, 19, 22] },
+  { type: "row", items: [15, 17, 18, 23] },
 ];
 
 
