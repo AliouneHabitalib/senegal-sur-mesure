@@ -202,8 +202,8 @@ export const destinations: Destination[] = [
   {
     slug: "fadiouth",
     name: "Fadiouth, l'île aux coquillages",
-    img: saloumBaobab,
-    alt: "Île de Fadiouth, île aux coquillages du Sénégal (photo provisoire)",
+    img: fadiouthPanneau,
+    alt: "Fresque « Fadiouth, l'île aux coquillages » à l'entrée de l'île, Sénégal",
     desc: "Une île entièrement construite de coquillages accumulés depuis des siècles, village lébou traditionnel et cimetière mixte chrétien-musulman unique en Afrique.",
     longDesc:
       "Reliée au continent par un long pont de bois, l'île de Fadiouth repose sur un socle de coquillages accumulés siècle après siècle : le sol, les ruelles et jusqu'aux murs en portent la trace. On y découvre un village lébou traditionnel, sans voitures, où la vie s'organise autour de la pêche, du séchage des coquillages et des greniers à mil posés sur pilotis. Un second pont mène au cimetière mixte, où tombes chrétiennes et musulmanes se côtoient sur la même colline de coquillages — un cas unique en Afrique et le symbole vivant de la cohabitation religieuse sénégalaise.",
