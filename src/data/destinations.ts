@@ -103,6 +103,7 @@ export const destinations: Destination[] = [
       { src: dakarPiroguesPlage, alt: "Pirogues colorées alignées sur la plage des pêcheurs à Dakar" },
       { src: dakarMonumentEscaliersVoyageurs, alt: "Voyageurs devant les escaliers du Monument de la Renaissance Africaine à Dakar" },
       { src: dakarMonumentEsplanade, alt: "Esplanade et grand escalier du Monument de la Renaissance Africaine, Dakar" },
+      { src: dakarRueGroupe, alt: "Diambar et de jeunes voyageurs en maillot du Sénégal dans une rue de Dakar" },
     ],
   },
   {
