@@ -166,6 +166,7 @@ export const destinations: Destination[] = [
       { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
       { src: lacRoseFamillePirogues, alt: "Voyageurs posant devant les pirogues aux couleurs du Sénégal sur les rives du Lac Rose" },
       { src: lacRoseProguePassagers, alt: "Voyageurs assis dans une pirogue traditionnelle sur le Lac Rose, Sénégal" },
+      { src: lacRosePirogueDrapeauGroupe, alt: "Groupe de voyageurs en pirogue sous le drapeau sénégalais sur les eaux roses du Lac Retba" },
     ],
   },
 
