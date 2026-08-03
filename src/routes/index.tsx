@@ -24,6 +24,8 @@ import diambarClientStromae from "@/assets/diambar-client-stromae.avif";
 import diambarNickSelfie from "@/assets/diambar-nick-selfie.avif";
 import saloumDinerPlage from "@/assets/saloum-diner-plage.avif";
 import rencontreVillage from "@/assets/rencontre-village-baobab.avif";
+import villageArbreHabitants from "@/assets/village-arbre-habitants.avif";
+import dakarRueGroupe from "@/assets/dakar-rue-groupe-maillots.avif";
 import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
 import lacRoseFamille from "@/assets/lac-rose-famille-pirogues.avif";
 import { MapPin, Compass, Users, Heart, Star, ArrowRight, Quote } from "lucide-react";
@@ -152,6 +154,8 @@ const galleryImages = [
   { src: rencontreVillage, alt: "Rencontre avec les habitants d'un village sénégalais sous le grand arbre" },
   { src: saloumPirogueJeunes, alt: "Jeunes voyageurs en pirogue dans les mangroves du Sine Saloum" },
   { src: lacRoseFamille, alt: "Famille de voyageurs devant les pirogues aux couleurs du Sénégal au Lac Rose" },
+  { src: villageArbreHabitants, alt: "Rencontre avec les habitants d'un village sénégalais sous un grand arbre" },
+  { src: dakarRueGroupe, alt: "Diambar et de jeunes voyageurs en maillot du Sénégal dans une rue de Dakar" },
 ];
 
 type GallerySection =
@@ -167,8 +171,8 @@ const gallerySections: GallerySection[] = [
   { type: "band", bg: 3, title: "Vivez", subtitle: "les traditions locales" },
   { type: "row", items: [2, 3, 7, 8] },
   { type: "band", bg: 10, title: "Partagez", subtitle: "avec les habitants" },
-  { type: "row", items: [9, 10, 19] },
-  { type: "row", items: [15, 17, 18] },
+  { type: "row", items: [9, 10, 19, 22] },
+  { type: "row", items: [15, 17, 18, 23] },
 ];
 
 

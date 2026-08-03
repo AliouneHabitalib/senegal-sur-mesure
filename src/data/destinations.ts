@@ -40,6 +40,12 @@ import lacRoseProguePassagers from "@/assets/lac-rose-pirogue-passagers.avif";
 import lompoulCampementTransats from "@/assets/lompoul-campement-transats.avif";
 import lompoulCampementJoie from "@/assets/lompoul-campement-joie.avif";
 import saloumPirogueJeunes from "@/assets/saloum-pirogue-jeunes.avif";
+import fadiouthPanneau from "@/assets/fadiouth-panneau-ile-coquillages.avif";
+import lacRosePirogueDrapeauGroupe from "@/assets/lac-rose-pirogue-drapeau-groupe.avif";
+import goreeExpositionExplication from "@/assets/goree-exposition-explication.avif";
+import lompoulDromadaireAcacia from "@/assets/lompoul-dromadaire-acacia.avif";
+import lompoulDromadaireAcacia2 from "@/assets/lompoul-dromadaire-acacia-2.avif";
+import dakarRueGroupe from "@/assets/dakar-rue-groupe-maillots.avif";
 
 export interface GalleryImage {
   src: string;
@@ -97,6 +103,7 @@ export const destinations: Destination[] = [
       { src: dakarPiroguesPlage, alt: "Pirogues colorées alignées sur la plage des pêcheurs à Dakar" },
       { src: dakarMonumentEscaliersVoyageurs, alt: "Voyageurs devant les escaliers du Monument de la Renaissance Africaine à Dakar" },
       { src: dakarMonumentEsplanade, alt: "Esplanade et grand escalier du Monument de la Renaissance Africaine, Dakar" },
+      { src: dakarRueGroupe, alt: "Diambar et de jeunes voyageurs en maillot du Sénégal dans une rue de Dakar" },
     ],
   },
   {
@@ -131,6 +138,7 @@ export const destinations: Destination[] = [
       gallery: [
         { src: goreeExpositionTraite, alt: "Exposition historique sur la traite atlantique : panneaux retraçant la capture et la traversée" },
         { src: goreeExpositionGuide, alt: "Diambar, guide indépendant, expliquant l'histoire de la traite atlantique à de jeunes visiteurs" },
+        { src: goreeExpositionExplication, alt: "Guide expliquant les panneaux de l'exposition sur la traite atlantique à de jeunes visiteurs" },
         { src: goreeMaisonEsclaves, alt: "Escaliers de la Maison des Esclaves à Gorée, lieu de mémoire de la traite atlantique" },
       ],
     },
@@ -158,6 +166,7 @@ export const destinations: Destination[] = [
       { src: lacRoseFlag, alt: "Pirogue rose portant le drapeau sénégalais sur les eaux du Lac Retba" },
       { src: lacRoseFamillePirogues, alt: "Voyageurs posant devant les pirogues aux couleurs du Sénégal sur les rives du Lac Rose" },
       { src: lacRoseProguePassagers, alt: "Voyageurs assis dans une pirogue traditionnelle sur le Lac Rose, Sénégal" },
+      { src: lacRosePirogueDrapeauGroupe, alt: "Groupe de voyageurs en pirogue sous le drapeau sénégalais sur les eaux roses du Lac Retba" },
     ],
   },
 
@@ -193,8 +202,8 @@ export const destinations: Destination[] = [
   {
     slug: "fadiouth",
     name: "Fadiouth, l'île aux coquillages",
-    img: saloumBaobab,
-    alt: "Île de Fadiouth, île aux coquillages du Sénégal (photo provisoire)",
+    img: fadiouthPanneau,
+    alt: "Fresque « Fadiouth, l'île aux coquillages » à l'entrée de l'île, Sénégal",
     desc: "Une île entièrement construite de coquillages accumulés depuis des siècles, village lébou traditionnel et cimetière mixte chrétien-musulman unique en Afrique.",
     longDesc:
       "Reliée au continent par un long pont de bois, l'île de Fadiouth repose sur un socle de coquillages accumulés siècle après siècle : le sol, les ruelles et jusqu'aux murs en portent la trace. On y découvre un village lébou traditionnel, sans voitures, où la vie s'organise autour de la pêche, du séchage des coquillages et des greniers à mil posés sur pilotis. Un second pont mène au cimetière mixte, où tombes chrétiennes et musulmanes se côtoient sur la même colline de coquillages — un cas unique en Afrique et le symbole vivant de la cohabitation religieuse sénégalaise.",
@@ -209,9 +218,9 @@ export const destinations: Destination[] = [
       { title: "Greniers à mil sur pilotis", text: "Silos traditionnels posés sur l'eau, à l'écart du village." },
     ],
     gallery: [
-      { src: saloumBaobab, alt: "Photo provisoire — paysage du delta près de Fadiouth, Sénégal" },
-      { src: saloumPontMangrove, alt: "Photo provisoire — passerelle en bois évoquant le pont de Fadiouth, Sénégal" },
-      { src: saloumBaobabPirogue, alt: "Photo provisoire — pirogue dans le delta près de Fadiouth, Sénégal" },
+      { src: fadiouthPanneau, alt: "Voyageurs devant la fresque « Fadiouth, l'île aux coquillages » au Sénégal" },
+      { src: saloumPontMangrove, alt: "Passerelle en bois évoquant le pont de Fadiouth, Sénégal" },
+      { src: saloumBaobabPirogue, alt: "Pirogue dans le delta près de Fadiouth, Sénégal" },
     ],
   },
   {
@@ -245,6 +254,8 @@ export const destinations: Destination[] = [
       { src: lompoulTenteUnique, alt: "Désert de Lompoul, tente mauritanienne au cœur des dunes, Sénégal" },
       { src: lompoulCampementTransats, alt: "Transats en bois sur le sable du campement de Lompoul, Sénégal" },
       { src: lompoulCampementJoie, alt: "Voyageurs joyeux au campement du désert de Lompoul, Sénégal" },
+      { src: lompoulDromadaireAcacia, alt: "Diambar et de jeunes voyageurs devant un dromadaire et un acacia dans les dunes de Lompoul" },
+      { src: lompoulDromadaireAcacia2, alt: "Jeunes voyageurs en maillot du Sénégal posant près d'un dromadaire dans le désert de Lompoul" },
     ],
   },
 
